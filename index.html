@@ -25,7 +25,7 @@
             letter-spacing: 6px; 
             margin-top: -10px;
         }
-        /* Grid layout to keep images side-by-side and not overlapping text */
+        /* Grid layout for images to prevent overlapping content */
         .hero-split {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -41,17 +41,17 @@
             aspect-ratio: 1/1;
             object-fit: cover;
         }
-        .content { padding: 40px 20px; position: relative; z-index: 10; }
+        .content { padding: 40px 20px; }
         .container { max-width: 800px; margin: 0 auto; }
         .profile-pic { 
             width: 180px; height: 180px; border-radius: 50%; object-fit: cover; 
             margin-bottom: 30px; border: 4px solid #CCFF00; 
         }
-        .section-title { color: #CCFF00; font-size: 2.2rem; margin-bottom: 20px; font-weight: 800; }
-        .bio { font-size: 1.1rem; line-height: 1.8; color: #BBB; margin-bottom: 40px; }
-        .divider { width: 60px; border-bottom: 5px solid #CCFF00; margin: 50px auto; }
-        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+        .section-title { color: #CCFF00; font-size: 2.2rem; margin: 40px 0 20px 0; font-weight: 800; }
+        .bio { font-size: 1.1rem; line-height: 1.8; color: #BBB; margin-bottom: 20px; }
+        .divider { width: 60px; border-bottom: 5px solid #CCFF00; margin: 30px auto; }
         
+        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
         .primary-btn, .secondary-btn { 
             display: inline-block;
             padding: 16px 35px; 
@@ -63,8 +63,9 @@
         }
         .primary-btn { background-color: #CCFF00; color: #121212; }
         .secondary-btn { background-color: transparent; color: #CCFF00; border: 2px solid #CCFF00; }
-        .primary-btn:hover { background-color: white; }
-        .secondary-btn:hover { background-color: rgba(204, 255, 0, 0.1); }
+        
+        /* Tooltip for the email copy fallback */
+        .email-text { display: block; margin-top: 15px; color: #888; font-size: 0.9rem; }
 
         footer { padding: 60px; border-top: 1px solid #333; color: #555; font-size: 0.8rem; }
     </style>
@@ -93,12 +94,21 @@
 
             <div class="divider"></div>
 
+            <h2 class="section-title">Skills</h2>
+            <p class="bio">
+                Specializing in Adobe Illustrator, logo construction, and vector precision. I focus on 
+                delivering high-quality assets that help brands stand out in a digital world.
+            </p>
+
+            <div class="divider"></div>
+
             <h2 class="section-title">Let's Connect</h2>
             <div class="btn-group">
                 <a href="https://wa.me/201069826122" target="_blank" class="primary-btn">WhatsApp</a>
-                <a href="mailto:h.msaiedahm@gmail.com?subject=Design%20Inquiry" class="secondary-btn">Email Me</a>
+                <a href="mailto:h.msaiedahm@gmail.com" class="secondary-btn">Email Me</a>
                 <a href="https://www.behance.net/hamzaahmed22" target="_blank" class="secondary-btn">Behance</a>
             </div>
+            <span class="email-text">h.msaiedahm@gmail.com</span>
         </div>
     </main>
 
