@@ -1,31 +1,64 @@
-<main class="content">
-        <div class="container">
-            <img src="./profile.jpeg" alt="Hamza" class="profile-pic">
-            
-            <h2 class="section-title">Profile</h2>
-            <p class="bio">
-                I am a new graphic designer mastering the tools of the trade. I thrive on creating bold, 
-                high-impact visuals that tell a story through clean vector lines and modern color theory.
-            </p>
-
-            <div class="divider"></div>
-
-            <h2 class="section-title">Skills</h2>
-            <p class="bio">
-                Specializing in Adobe Illustrator, logo construction, and vector precision. I focus on 
-                delivering high-quality assets that help brands stand out in a digital world.
-            </p>
-
-            <div class="divider"></div>
-
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="btn-group">
-                <a href="https://wa.me/201069826122" target="_blank" class="primary-btn">WhatsApp</a>
-                
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=h.msaiedahm@gmail.com&su=Graphic%20Design%20Inquiry" target="_blank" class="secondary-btn">Email Me</a>
-                
-                <a href="https://www.behance.net/hamzaahmed22" target="_blank" class="secondary-btn">Behance</a>
-            </div>
-            <span class="email-text">h.msaiedahm@gmail.com</span>
-        </div>
-    </main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza | Graphic Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        /* THIS IS THE PART THAT WAS MISSING */
+        body { 
+            margin: 0; padding: 0; background-color: #121212; color: #EEEEEE; 
+            font-family: 'Inter', sans-serif; text-align: center; 
+        }
+        header { padding: 60px 20px 20px 20px; }
+        h1.name { 
+            font-family: 'Righteous', cursive; 
+            color: #CCFF00; 
+            font-size: 5rem; 
+            margin: 0; 
+            text-transform: uppercase;
+        }
+        .subtitle { 
+            font-size: 1.2rem; 
+            color: #888; 
+            text-transform: uppercase; 
+            letter-spacing: 6px; 
+            margin-top: -10px;
+        }
+        .hero-split {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .hero-img { 
+            width: 100%; 
+            border-radius: 15px; 
+            border: 1px solid #333;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        .content { padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .profile-pic { 
+            width: 180px; height: 180px; border-radius: 50%; object-fit: cover; 
+            margin-bottom: 30px; border: 4px solid #CCFF00; 
+        }
+        .section-title { color: #CCFF00; font-size: 2.2rem; margin: 40px 0 20px 0; font-weight: 800; }
+        .bio { font-size: 1.1rem; line-height: 1.8; color: #BBB; margin-bottom: 20px; }
+        .divider { width: 60px; border-bottom: 5px solid #CCFF00; margin: 30px auto; }
+        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+        .primary-btn, .secondary-btn { 
+            display: inline-block;
+            padding: 16px 35px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            text-transform: uppercase;
+        }
+        .primary-btn { background-color: #CCFF00; color: #121212; }
+        .secondary-btn { background-color: transparent; color: #CCFF00; border: 2px solid #CCFF00; }
+        .email-text {
