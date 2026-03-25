@@ -4,31 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamza Ahmed | Graphic Designer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body { 
             margin: 0; padding: 0; background-color: #121212; color: #EEEEEE; 
             font-family: 'Inter', sans-serif; text-align: center; 
-        }
-
-        header { padding: 60px 20px 20px 20px; }
-
-        /* New Font Style for your Name */
-        h1.name { 
-            font-family: 'Righteous', cursive; 
-            color: #CCFF00; 
-            font-size: 5rem; 
-            margin: 0; 
-            text-transform: uppercase;
-            text-shadow: 3px 3px 0px rgba(204, 255, 0, 0.1);
-        }
-
-        .subtitle { 
-            font-size: 1.2rem; 
-            color: #888; 
-            text-transform: uppercase; 
-            letter-spacing: 6px; 
-            margin-top: -10px;
         }
 
         /* Split Hero Section */
@@ -36,28 +16,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap; 
-            padding: 40px 20px;
-            gap: 30px;
+            flex-wrap: wrap; /* Makes it stack on phones */
+            padding: 60px 20px;
+            gap: 20px;
         }
 
         .hero-left { flex: 1; max-width: 400px; }
-        .hero-right { flex: 1; max-width: 550px; }
+        .hero-right { flex: 1; max-width: 600px; }
 
-        .mascot-img { 
-            width: 100%; 
-            border-radius: 20px; 
-            border: 2px solid #333;
-        }
-        
-        .pyramid-img { 
-            width: 100%; 
-            border-radius: 20px; 
-            filter: drop-shadow(0 0 15px rgba(204, 255, 0, 0.1));
-        }
+        .mascot-img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(204, 255, 0, 0.1); }
+        .pyramid-img { width: 100%; border-radius: 20px; }
+
+        h1.name { font-family: 'Pacifico', cursive; color: #CCFF00; font-size: 4rem; margin: 0; }
+        .subtitle { font-size: 1.2rem; color: #888; text-transform: uppercase; letter-spacing: 4px; }
 
         /* Content Area */
-        .content { padding: 60px 20px; }
+        .content { padding: 40px 20px; }
         .container { max-width: 800px; margin: 0 auto; }
 
         .profile-pic { 
@@ -65,36 +39,29 @@
             margin-bottom: 30px; border: 4px solid #CCFF00; 
         }
 
-        .section-title { color: #CCFF00; font-size: 2.2rem; margin-bottom: 20px; font-weight: 800; }
+        .section-title { color: #CCFF00; font-size: 2rem; margin-bottom: 20px; font-weight: 800; }
         .bio { font-size: 1.1rem; line-height: 1.8; color: #BBB; margin-bottom: 40px; }
 
-        /* Short accent divider */
-        .divider { width: 60px; border-bottom: 5px solid #CCFF00; margin: 50px auto; }
+        .divider { width: 80px; border-bottom: 4px solid #CCFF00; margin: 60px auto; }
 
         /* Contact Buttons */
-        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
-        
+        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
         .primary-btn { 
-            background-color: #CCFF00; color: #121212; padding: 16px 35px; 
-            border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s;
-            text-transform: uppercase; letter-spacing: 1px;
+            background-color: #CCFF00; color: #121212; padding: 15px 30px; 
+            border-radius: 50px; text-decoration: none; font-weight: 800; transition: 0.3s;
         }
-
         .secondary-btn { 
             background-color: transparent; color: #CCFF00; border: 2px solid #CCFF00;
-            padding: 14px 35px; border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s;
-            text-transform: uppercase; letter-spacing: 1px;
+            padding: 13px 30px; border-radius: 50px; text-decoration: none; font-weight: 800; transition: 0.3s;
         }
+        .primary-btn:hover, .secondary-btn:hover { transform: translateY(-3px); filter: brightness(1.2); }
 
-        .primary-btn:hover { background-color: #fff; transform: translateY(-3px); }
-        .secondary-btn:hover { background-color: rgba(204, 255, 0, 0.1); transform: translateY(-3px); }
-
-        footer { padding: 60px; border-top: 1px solid #333; color: #555; font-size: 0.8rem; letter-spacing: 2px; }
+        footer { padding: 40px; border-top: 1px solid #333; color: #555; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-    <header>
+    <header style="padding-top: 40px;">
         <h1 class="name">Hamza Ahmed</h1>
         <p class="subtitle">Graphic Designer</p>
     </header>
@@ -106,3 +73,40 @@
         <div class="hero-right">
             <img src="https://static.vecteezy.com/system/resources/previews/002/687/496/original/the-pyramids-of-egypt-egyptian-pyramids-on-the-river-the-cheops-pyramid-in-cairo-in-giza-egyptian-stone-structures-illustration-free-vector.jpg" alt="Pyramid Illustration" class="pyramid-img">
         </div>
+    </section>
+
+    <main class="content">
+        <div class="container">
+            <img src="profile.jpg" alt="Hamza Ahmed" class="profile-pic">
+            
+            <h2 class="section-title">Profile</h2>
+            <p class="bio">
+                I am a new graphic designer mastering the tools of the trade. I thrive on creating bold, 
+                high-impact visuals that tell a story.
+            </p>
+
+            <div class="divider"></div>
+
+            <h2 class="section-title">Skills</h2>
+            <p class="bio">
+                Specializing in vector precision, logo construction, and branding layouts. 
+                My process involves deep technical knowledge combined with a modern design aesthetic.
+            </p>
+
+            <div class="divider"></div>
+
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="btn-group">
+                <a href="https://wa.me/201069826122" target="_blank" class="primary-btn">WhatsApp</a>
+                <a href="mailto:h.msaiedahm@gmail.com" class="secondary-btn">Email Me</a>
+                <a href="https://www.behance.net/hamzaahmed22" target="_blank" class="secondary-btn">Behance</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 HAMZA AHMED | ALL RIGHTS RESERVED</p>
+    </footer>
+
+</body>
+</html>
