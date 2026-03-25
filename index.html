@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamza Mohamed | Graphic Designer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&family=Righteous&display=swap" rel="stylesheet">
+    <title>Hamza | Graphic Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Righteous&display=swap" rel="stylesheet">
     <style>
         body { 
             margin: 0; padding: 0; background-color: #121212; color: #EEEEEE; 
@@ -29,7 +29,7 @@
             margin-top: -10px;
         }
 
-        /* Side-by-Side Images */
+        /* Split Hero Section */
         .hero-split {
             display: flex;
             align-items: center;
@@ -67,17 +67,18 @@
         /* Buttons */
         .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
         
-        .primary-btn { 
-            background-color: #CCFF00; color: #121212; padding: 16px 35px; 
-            border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s;
+        .primary-btn, .secondary-btn { 
+            display: inline-block;
+            padding: 16px 35px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            transition: 0.3s;
             text-transform: uppercase;
         }
 
-        .secondary-btn { 
-            background-color: transparent; color: #CCFF00; border: 2px solid #CCFF00;
-            padding: 14px 35px; border-radius: 8px; text-decoration: none; font-weight: 800; transition: 0.3s;
-            text-transform: uppercase;
-        }
+        .primary-btn { background-color: #CCFF00; color: #121212; }
+        .secondary-btn { background-color: transparent; color: #CCFF00; border: 2px solid #CCFF00; }
 
         .primary-btn:hover { background-color: #fff; transform: translateY(-3px); }
         .secondary-btn:hover { background-color: rgba(204, 255, 0, 0.1); transform: translateY(-3px); }
@@ -88,51 +89,9 @@
 <body>
 
     <header>
-        <h1 class="name">Hamza Mohamed</h1>
+        <h1 class="name">Hamza</h1>
         <p class="subtitle">Graphic Designer</p>
     </header>
 
     <section class="hero-split">
         <div class="hero-left">
-            <img src="https://th.bing.com/th/id/OIP.JBJPqmWveXeBZ8B12hlYJAHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="CN Tower Illustration" class="hero-img">
-        </div>
-        <div class="hero-right">
-            <img src="https://static.vecteezy.com/system/resources/previews/002/687/496/original/the-pyramids-of-egypt-egyptian-pyramids-on-the-river-the-cheops-pyramid-in-cairo-in-giza-egyptian-stone-structures-illustration-free-vector.jpg" alt="Pyramid Illustration" class="hero-img">
-        </div>
-    </section>
-
-    <main class="content">
-        <div class="container">
-          <img src="profile.jpeg" alt="Hamza Mohamed" class="profile-pic">
-            
-            <h2 class="section-title">Profile</h2>
-            <p class="bio">
-                I am a new graphic designer mastering the tools of the trade. I thrive on creating bold, 
-                high-impact visuals that tell a story through clean vector lines and modern color theory.
-            </p>
-
-            <div class="divider"></div>
-
-            <h2 class="section-title">Skills</h2>
-            <p class="bio">
-                Specializing in Adobe Illustrator, logo construction, and vector precision. 
-                I focus on delivering high-quality assets that help brands stand out.
-            </p>
-
-            <div class="divider"></div>
-
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="btn-group">
-                <a href="https://wa.me/201069826122" target="_blank" class="primary-btn">WhatsApp</a>
-                <a href="mailto:h.msaiedahm@gmail.com" class="secondary-btn">Email Me</a>
-                <a href="https://www.behance.net/hamzaahmed22" target="_blank" class="secondary-btn">Behance</a>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>© 2026 HAMZA MOHAMED | ALL RIGHTS RESERVED</p>
-    </footer>
-
-</body>
-</html>
