@@ -25,23 +25,23 @@
             letter-spacing: 6px; 
             margin-top: -10px;
         }
-        /* Fixed Hero Section so content shows below it */
+        /* Grid layout to keep images side-by-side and not overlapping text */
         .hero-split {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap; 
-            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            min-height: 400px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        .hero-left, .hero-right { flex: 1; max-width: 450px; }
         .hero-img { 
             width: 100%; 
             border-radius: 15px; 
             border: 1px solid #333;
+            aspect-ratio: 1/1;
+            object-fit: cover;
         }
-        .content { padding: 60px 20px; }
+        .content { padding: 40px 20px; position: relative; z-index: 10; }
         .container { max-width: 800px; margin: 0 auto; }
         .profile-pic { 
             width: 180px; height: 180px; border-radius: 50%; object-fit: cover; 
@@ -51,6 +51,7 @@
         .bio { font-size: 1.1rem; line-height: 1.8; color: #BBB; margin-bottom: 40px; }
         .divider { width: 60px; border-bottom: 5px solid #CCFF00; margin: 50px auto; }
         .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+        
         .primary-btn, .secondary-btn { 
             display: inline-block;
             padding: 16px 35px; 
@@ -58,9 +59,13 @@
             text-decoration: none; 
             font-weight: 800; 
             text-transform: uppercase;
+            transition: 0.3s;
         }
         .primary-btn { background-color: #CCFF00; color: #121212; }
         .secondary-btn { background-color: transparent; color: #CCFF00; border: 2px solid #CCFF00; }
+        .primary-btn:hover { background-color: white; }
+        .secondary-btn:hover { background-color: rgba(204, 255, 0, 0.1); }
+
         footer { padding: 60px; border-top: 1px solid #333; color: #555; font-size: 0.8rem; }
     </style>
 </head>
@@ -72,12 +77,8 @@
     </header>
 
     <section class="hero-split">
-        <div class="hero-left">
-            <img src="https://static.vecteezy.com/system/resources/previews/002/687/496/original/the-pyramids-of-egypt-egyptian-pyramids-on-the-river-the-cheops-pyramid-in-cairo-in-giza-egyptian-stone-structures-illustration-free-vector.jpg" alt="Pyramid Illustration" class="hero-img">
-        </div>
-        <div class="hero-right">
-            <img src="https://th.bing.com/th/id/OIP.JBJPqmWveXeBZ8B12hlYJAHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="CN Tower Illustration" class="hero-img">
-        </div>
+        <img src="https://static.vecteezy.com/system/resources/previews/002/687/496/original/the-pyramids-of-egypt-egyptian-pyramids-on-the-river-the-cheops-pyramid-in-cairo-in-giza-egyptian-stone-structures-illustration-free-vector.jpg" alt="Pyramid Illustration" class="hero-img">
+        <img src="https://th.bing.com/th/id/OIP.JBJPqmWveXeBZ8B12hlYJAHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="CN Tower Illustration" class="hero-img">
     </section>
 
     <main class="content">
@@ -92,17 +93,10 @@
 
             <div class="divider"></div>
 
-            <h2 class="section-title">Skills</h2>
-            <p class="bio">
-                Specializing in Adobe Illustrator, logo construction, and vector precision.
-            </p>
-
-            <div class="divider"></div>
-
             <h2 class="section-title">Let's Connect</h2>
             <div class="btn-group">
                 <a href="https://wa.me/201069826122" target="_blank" class="primary-btn">WhatsApp</a>
-                <a href="mailto:h.msaiedahm@gmail.com" class="secondary-btn">Email Me</a>
+                <a href="mailto:h.msaiedahm@gmail.com?subject=Design%20Inquiry" class="secondary-btn">Email Me</a>
                 <a href="https://www.behance.net/hamzaahmed22" target="_blank" class="secondary-btn">Behance</a>
             </div>
         </div>
