@@ -3,31 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HM.designs | Graphic Designer</title>
+    <title>HM.designs</title>
     <style>
+        /* Dark professional theme */
         body {
-            background-color: #000000;
-            color: #00FF00; /* Neon Green */
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-            padding: 50px;
+            background-color: #0b0e14;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
-        h1 { font-size: 3rem; margin-bottom: 20px; }
-        .contact-info { margin-top: 30px; font-size: 1.2rem; }
-        a { color: #00FF00; text-decoration: none; margin: 10px; }
-        a:hover { text-decoration: underline; }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #8892b0;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-section {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            background-color: #1a1f29;
+            border: 1px solid #30363d;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #30363d;
+            border-color: #58a6ff;
+        }
     </style>
 </head>
 <body>
 
     <h1>HM.designs</h1>
-    <p>Professional Graphic Designer</p>
+    <div class="subtitle">Graphic Designer & Visual Strategist</div>
 
-    <div class="contact-info">
-        <p>Email: <a href="mailto:h.msaiedahm@gmail.com">h.msaiedahm@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/201069826122">+20 106 982 6122</a></p>
-        <p>Portfolio: <a href="https://www.behance.net/hamzaahmed22" target="_blank">Behance Profile</a></p>
+    <div class="contact-section">
+        <a href="mailto:h.msaiedahm@gmail.com" class="btn">Email Me</a>
+        <a href="https://wa.me/201069826122" class="btn" target="_blank">WhatsApp</a>
+        <a href="https://www.behance.net/hamzaahmed22" class="btn" target="_blank">Behance</a>
     </div>
 
 </body>
+</html>
 </html>
