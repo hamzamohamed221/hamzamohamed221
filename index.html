@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hamza Design — Studio</title>
+<title>Hamza Studio — Visual Identity</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -22,7 +22,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* luxury glow */
+/* glow */
 .bg{
 position:fixed;
 width:900px;
@@ -43,8 +43,8 @@ align-items:center;
 }
 
 nav h2{
-font-size:18px;
 letter-spacing:3px;
+font-size:18px;
 }
 
 nav a{
@@ -67,7 +67,6 @@ max-width:900px;
 .hero h1{
 font-size:68px;
 line-height:1.05;
-animation:fadeUp 1s ease;
 }
 
 .hero p{
@@ -75,29 +74,25 @@ margin-top:20px;
 color:#aaa;
 font-size:18px;
 max-width:650px;
-animation:fadeUp 1.2s ease;
 }
 
-/* BUTTONS (luxury feel) */
 .btn{
 display:inline-block;
 margin-top:30px;
 padding:14px 26px;
-background:linear-gradient(90deg,#fff,#ddd);
+background:#fff;
 color:#000;
 font-weight:700;
 border-radius:12px;
 text-decoration:none;
 transition:0.4s;
-box-shadow:0 10px 30px rgba(255,255,255,0.05);
 }
 
 .btn:hover{
 transform:translateY(-3px) scale(1.03);
-box-shadow:0 15px 50px rgba(255,45,125,0.2);
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
 padding:90px 8%;
 }
@@ -114,19 +109,42 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:22px;
 }
 
-/* CARDS */
+/* 🧊 GLASS CARD */
 .card{
-background:#141420;
+background:rgba(255,255,255,0.06);
+border-radius:16px;
 padding:24px;
-border-radius:18px;
-transition:0.5s;
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+transition:0.4s;
 position:relative;
 overflow:hidden;
+cursor:pointer;
 }
 
+/* hover glass glow */
 .card:hover{
-transform:translateY(-12px);
-box-shadow:0 20px 60px rgba(255,45,125,0.15);
+transform:translateY(-10px) scale(1.02);
+border:1px solid rgba(255,45,125,0.4);
+box-shadow:0 20px 70px rgba(255,45,125,0.15);
+}
+
+/* light sweep animation */
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent);
+transition:0.6s;
+}
+
+.card:hover::before{
+left:100%;
 }
 
 .card h3{
@@ -144,23 +162,19 @@ margin-top:15px;
 color:#ff2d7d;
 font-weight:600;
 text-decoration:none;
-transition:0.3s;
 }
 
-.card a:hover{
-letter-spacing:1px;
-}
-
-/* PROFILE BOX */
+/* PROFILE / SKILLS */
 .box{
-background:#141420;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+border-radius:16px;
 padding:25px;
-border-radius:18px;
 color:#aaa;
-line-height:1.6;
 }
 
-/* CONTACT LUXURY CARDS */
+/* CONTACT */
 .contact-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -168,25 +182,23 @@ gap:20px;
 }
 
 .contact-card{
-background:#141420;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
 padding:30px;
-border-radius:18px;
+border-radius:16px;
 text-align:center;
 transition:0.4s;
 }
 
 .contact-card:hover{
 transform:translateY(-10px);
-box-shadow:0 20px 60px rgba(255,45,125,0.15);
-}
-
-.contact-card h3{
-margin-bottom:15px;
+border:1px solid rgba(255,45,125,0.4);
 }
 
 .contact-btn{
 display:inline-block;
-margin-top:10px;
+margin-top:12px;
 padding:12px 18px;
 border-radius:10px;
 text-decoration:none;
@@ -209,11 +221,6 @@ transform:scale(1.05);
 }
 
 /* animation */
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
-
 .hidden{
 opacity:0;
 transform:translateY(40px);
@@ -243,8 +250,8 @@ font-size:13px;
 <h2>HZ.STUDIO</h2>
 <div>
 <a href="#work">Work</a>
-<a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -253,20 +260,20 @@ font-size:13px;
 <div class="hero">
 <h1>Luxury Visual Identity Studio</h1>
 <p>
-I design high-end branding systems, social media campaigns, and visual identities for modern businesses and luxury brands.
+I design modern branding systems, social media campaigns, and visual identities for premium businesses.
 </p>
 <a class="btn" href="#work">View Studio Work</a>
 </div>
 
 <!-- WORK -->
 <section id="work" class="hidden">
-<h2 class="title">Selected Work</h2>
+<h2 class="title">Selected Projects</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Nexus Brand Identity</h3>
-<p>Complete clothing brand identity system.</p>
+<p>Full clothing brand identity system.</p>
 <a href="https://www.behance.net/gallery/250314097/NEXUS-Modern-Clothing-Brand-Identity" target="_blank">Open Case Study →</a>
 </div>
 
@@ -277,20 +284,20 @@ I design high-end branding systems, social media campaigns, and visual identitie
 </div>
 
 <div class="card">
-<h3>Automotive Visuals</h3>
-<p>Mercedes AMG cinematic composition.</p>
+<h3>Mercedes AMG Visual Edit</h3>
+<p>Cinematic automotive composition.</p>
 <a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank">Open Case Study →</a>
 </div>
 
 <div class="card">
-<h3>Product Design Posters</h3>
-<p>Luxury product advertising visuals.</p>
+<h3>Product Posters</h3>
+<p>Luxury product advertising design.</p>
 <a href="https://www.behance.net/gallery/247769459/Apple-AirPods-Max" target="_blank">Open Case Study →</a>
 </div>
 
 <div class="card">
 <h3>Fragrance Campaign</h3>
-<p>High-end perfume visual identity.</p>
+<p>High-end perfume branding visuals.</p>
 <a href="https://www.behance.net/gallery/247716583/Luxury-Fragrance-Visualization" target="_blank">Open Case Study →</a>
 </div>
 
@@ -303,15 +310,6 @@ I design high-end branding systems, social media campaigns, and visual identitie
 </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="hidden">
-<h2 class="title">Profile</h2>
-<div class="box">
-Junior–intermediate graphic designer specializing in visual identity, branding systems, and social media campaigns.  
-Focused on clean, modern, and luxury-driven design that communicates brand value clearly and effectively.
-</div>
-</section>
-
 <!-- SKILLS -->
 <section id="skills" class="hidden">
 <h2 class="title">Skills</h2>
@@ -319,20 +317,28 @@ Focused on clean, modern, and luxury-driven design that communicates brand value
 <div class="grid">
 
 <div class="box">
-<h3>Adobe Photoshop</h3>
-<p>Strong experience in posters, ads, and visual compositions.</p>
+<h3>Photoshop</h3>
+<p>Strong in posters, ads, and visual compositions.</p>
 </div>
 
 <div class="box">
-<h3>Adobe Illustrator</h3>
-<p>Brand identity systems, logos, and vector-based design.</p>
+<h3>Illustrator</h3>
+<p>Brand identity, logos, and vector systems.</p>
 </div>
 
 <div class="box">
 <h3>After Effects</h3>
-<p>Basic knowledge — explored motion design once.</p>
+<p>Basic motion design experience.</p>
 </div>
 
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+<h2 class="title">Profile</h2>
+<div class="box">
+Junior–intermediate designer focused on luxury branding, visual identity systems, and modern social media campaigns.
 </div>
 </section>
 
@@ -344,17 +350,15 @@ Focused on clean, modern, and luxury-driven design that communicates brand value
 
 <div class="contact-card">
 <h3>Email</h3>
-<p>For business inquiries & collaborations</p>
-<a class="contact-btn email-btn" href="mailto:h.msaiedahm@gmail.com">
-Send Email
-</a>
+<p>Business inquiries & collaborations</p>
+<a class="contact-btn email-btn" href="mailto:h.msaiedahm@gmail.com">Send Email</a>
 </div>
 
 <div class="contact-card">
 <h3>WhatsApp</h3>
-<p>Quick chat & project discussions</p>
+<p>Quick project discussions</p>
 <a class="contact-btn whatsapp-btn"
-href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20am%20looking%20for%20help%20with%20my%20project.%20Could%20you%20help%20me%20with%20it?"
+href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20am%20looking%20for%20help%20with%20my%20project.%20Can%20you%20help%20me%3F"
 target="_blank">
 Message Me
 </a>
@@ -368,8 +372,7 @@ Message Me
 </footer>
 
 <script>
-// scroll reveal
-const observer = new IntersectionObserver(entries=>{
+const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.classList.add("show");
