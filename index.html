@@ -1,183 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hamza Design — Graphic Designer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hamza Design — Visual Identity Designer</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0e0e0e;
-      color: #fff;
-      line-height: 1.6;
-    }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-    header {
-      padding: 40px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter;
+}
 
-    nav a {
-      color: #aaa;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+body{
+background:#0b0b0f;
+color:#fff;
+overflow-x:hidden;
+}
 
-    nav a:hover {
-      color: white;
-    }
+/* background glow */
+.bg-glow{
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#ff3c7f33,transparent 60%);
+top:-200px;
+right:-200px;
+z-index:-1;
+filter:blur(60px);
+}
 
-    .hero {
-      padding: 80px 10%;
-      max-width: 900px;
-    }
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:25px 8%;
+align-items:center;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+nav h2{
+font-size:18px;
+letter-spacing:2px;
+}
 
-    .hero p {
-      color: #bbb;
-      font-size: 18px;
-      max-width: 600px;
-    }
+nav a{
+color:#aaa;
+margin-left:20px;
+text-decoration:none;
+transition:0.3s;
+}
 
-    .cta {
-      margin-top: 20px;
-    }
+nav a:hover{
+color:#fff;
+}
 
-    .cta a {
-      display: inline-block;
-      padding: 12px 20px;
-      background: white;
-      color: black;
-      text-decoration: none;
-      margin-right: 10px;
-      font-weight: bold;
-    }
+/* HERO */
+.hero{
+padding:100px 8%;
+max-width:900px;
+}
 
-    .section {
-      padding: 60px 10%;
-    }
+.hero h1{
+font-size:60px;
+line-height:1.1;
+animation:fadeUp 1s ease;
+}
 
-    .section h2 {
-      margin-bottom: 20px;
-      font-size: 28px;
-    }
+.hero p{
+margin-top:20px;
+color:#aaa;
+max-width:600px;
+font-size:18px;
+animation:fadeUp 1.4s ease;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:12px 22px;
+background:#fff;
+color:#000;
+font-weight:600;
+text-decoration:none;
+border-radius:8px;
+transition:0.3s;
+}
 
-    .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-    }
+.btn:hover{
+transform:scale(1.05);
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-    }
+/* SECTION */
+section{
+padding:80px 8%;
+}
 
-    .tag {
-      font-size: 12px;
-      color: #888;
-    }
+.section-title{
+font-size:28px;
+margin-bottom:30px;
+}
 
-    footer {
-      padding: 40px 10%;
-      text-align: center;
-      color: #666;
-      font-size: 13px;
-    }
-  </style>
+/* PROJECT GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:#141420;
+padding:20px;
+border-radius:14px;
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 40px rgba(255,60,127,0.15);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
+}
+
+.card a{
+display:inline-block;
+margin-top:15px;
+color:#ff3c7f;
+text-decoration:none;
+font-weight:600;
+}
+
+/* animation */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* scroll animation */
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#666;
+font-size:13px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div><strong>HZ.design</strong></div>
-  <nav>
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<div class="bg-glow"></div>
 
-<section class="hero">
-  <h1>I design visual identities that sell brands.</h1>
-  <p>
-    Graphic designer focused on social media ads, branding systems, and high-impact visual communication for modern businesses.
-  </p>
+<nav>
+<h2>HZ.DESIGN</h2>
+<div>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-  <div class="cta">
-    <a href="mailto:h.msaiedahm@gmail.com">Email Me</a>
-    <a href="https://wa.me/201069826122">WhatsApp</a>
-  </div>
+<!-- HERO -->
+<div class="hero">
+<h1>Visual Identity & Branding Designer</h1>
+<p>
+I design modern visual systems, social media campaigns, and luxury brand identities for businesses that want to stand out.
+</p>
+
+<a class="btn" href="#work">View My Work</a>
+</div>
+
+<!-- WORK -->
+<section id="work" class="hidden">
+<h2 class="section-title">Selected Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Nexus Clothing Brand Identity</h3>
+<p>Modern clothing brand identity system with logo, typography, and mockups.</p>
+<a href="https://www.behance.net/gallery/250314097/NEXUS-Modern-Clothing-Brand-Identity" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+<h3>Luxury Real Estate Campaign</h3>
+<p>High-end marketing visuals for real estate advertising.</p>
+<a href="https://www.behance.net/gallery/250780741/Luxury-Real-Estate-Marketing-Campaign" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+<h3>Mercedes AMG Visual Edit</h3>
+<p>Automotive cinematic visual composition.</p>
+<a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+<h3>AirPods Max Poster</h3>
+<p>Minimal product advertisement design.</p>
+<a href="https://www.behance.net/gallery/247769459/Apple-AirPods-Max" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+<h3>Luxury Fragrance Poster</h3>
+<p>Premium perfume advertising visualization.</p>
+<a href="https://www.behance.net/gallery/247716583/Luxury-Fragrance-Visualization" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+<h3>Mercedes SL 63 Design</h3>
+<p>Automotive poster & visual identity concept.</p>
+<a href="https://www.behance.net/gallery/247709757/SL-63-Automotive-Design" target="_blank">View Project →</a>
+</div>
+
+</div>
 </section>
 
-<section class="section" id="work">
-  <h2>Selected Work</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Nexus Apparel Identity</h3>
-      <p class="tag">Branding / Identity Design</p>
-      <p>Minimalist logomark and apparel visual system for streetwear brand.</p>
-    </div>
-
-    <div class="card">
-      <h3>AXON Brand System</h3>
-      <p class="tag">Typography / Visual System</p>
-      <p>Technical branding system focused on clean typography and structure.</p>
-    </div>
-
-    <div class="card">
-      <h3>Social Media Campaigns</h3>
-      <p class="tag">Instagram / Ads</p>
-      <p>High-performance post designs for marketing and engagement.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="services">
-  <h2>Services</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Social Media Design</h3>
-      <p>Instagram posts, ads, story systems.</p>
-    </div>
-
-    <div class="card">
-      <h3>Brand Identity</h3>
-      <p>Logos, color systems, typography direction.</p>
-    </div>
-
-    <div class="card">
-      <h3>Marketing Visuals</h3>
-      <p>Real estate ads, product promotions, campaigns.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <h2>Contact</h2>
-  <p>Email: h.msaiedahm@gmail.com</p>
-  <p>WhatsApp: +20 106 982 6122</p>
+<!-- CONTACT -->
+<section id="contact" class="hidden">
+<h2 class="section-title">Contact</h2>
+<p style="color:#aaa;">Email: h.msaiedahm@gmail.com</p>
+<p style="color:#aaa;">WhatsApp: +20 106 982 6122</p>
 </section>
 
 <footer>
-  © 2026 Hamza Design — Visual Identity & Branding
+© 2026 Hamza Design — Visual Identity & Branding
 </footer>
+
+<script>
+// scroll animation
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+</script>
 
 </body>
 </html>
