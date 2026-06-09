@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Hamza Design — Visual Identity Designer</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+<style>
 *{
 margin:0;
 padding:0;
@@ -16,34 +16,34 @@ font-family:Inter;
 }
 
 body{
-background:#0b0b0f;
+background:#07070b;
 color:#fff;
 overflow-x:hidden;
 }
 
-/* background glow */
-.bg-glow{
+/* cinematic background */
+.bg{
 position:fixed;
-width:600px;
-height:600px;
-background:radial-gradient(circle,#ff3c7f33,transparent 60%);
-top:-200px;
-right:-200px;
+width:800px;
+height:800px;
+background:radial-gradient(circle,#ff2d7d33,transparent 60%);
+top:-250px;
+right:-250px;
+filter:blur(80px);
 z-index:-1;
-filter:blur(60px);
 }
 
 /* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-padding:25px 8%;
+padding:30px 8%;
 align-items:center;
 }
 
 nav h2{
-font-size:18px;
 letter-spacing:2px;
+font-size:18px;
 }
 
 nav a{
@@ -59,33 +59,33 @@ color:#fff;
 
 /* HERO */
 .hero{
-padding:100px 8%;
+padding:120px 8% 80px;
 max-width:900px;
 }
 
 .hero h1{
-font-size:60px;
-line-height:1.1;
+font-size:64px;
+line-height:1.05;
 animation:fadeUp 1s ease;
 }
 
 .hero p{
 margin-top:20px;
 color:#aaa;
-max-width:600px;
 font-size:18px;
-animation:fadeUp 1.4s ease;
+max-width:650px;
+animation:fadeUp 1.2s ease;
 }
 
 .btn{
-margin-top:30px;
 display:inline-block;
+margin-top:30px;
 padding:12px 22px;
 background:#fff;
 color:#000;
 font-weight:600;
+border-radius:10px;
 text-decoration:none;
-border-radius:8px;
 transition:0.3s;
 }
 
@@ -93,35 +93,36 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
-padding:80px 8%;
+padding:90px 8%;
 }
 
-.section-title{
+.title{
 font-size:28px;
 margin-bottom:30px;
 }
 
-/* PROJECT GRID */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
+/* CARD */
 .card{
 background:#141420;
-padding:20px;
-border-radius:14px;
+padding:22px;
+border-radius:16px;
 transition:0.4s;
 position:relative;
 overflow:hidden;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 40px rgba(255,60,127,0.15);
+transform:translateY(-12px);
+box-shadow:0 15px 50px rgba(255,45,125,0.18);
 }
 
 .card h3{
@@ -136,9 +137,30 @@ font-size:14px;
 .card a{
 display:inline-block;
 margin-top:15px;
-color:#ff3c7f;
+color:#ff2d7d;
 text-decoration:none;
 font-weight:600;
+}
+
+/* PROFILE + SKILLS */
+.info-box{
+background:#141420;
+padding:25px;
+border-radius:16px;
+color:#aaa;
+}
+
+.skill-bar{
+margin-top:10px;
+background:#222;
+height:8px;
+border-radius:50px;
+overflow:hidden;
+}
+
+.skill-fill{
+height:100%;
+background:linear-gradient(90deg,#ff2d7d,#7c3aed);
 }
 
 /* animation */
@@ -147,7 +169,6 @@ from{opacity:0;transform:translateY(30px);}
 to{opacity:1;transform:translateY(0);}
 }
 
-/* scroll animation */
 .hidden{
 opacity:0;
 transform:translateY(40px);
@@ -170,66 +191,105 @@ font-size:13px;
 
 <body>
 
-<div class="bg-glow"></div>
+<div class="bg"></div>
 
+<!-- NAV -->
 <nav>
 <h2>HZ.DESIGN</h2>
 <div>
 <a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-<h1>Visual Identity & Branding Designer</h1>
+<h1>Visual Identity Designer</h1>
 <p>
-I design modern visual systems, social media campaigns, and luxury brand identities for businesses that want to stand out.
+I create modern branding systems, social media campaigns, and luxury visual identities for businesses that want to stand out.
 </p>
-
-<a class="btn" href="#work">View My Work</a>
+<a class="btn" href="#work">Explore Work</a>
 </div>
 
 <!-- WORK -->
 <section id="work" class="hidden">
-<h2 class="section-title">Selected Projects</h2>
+<h2 class="title">Selected Projects</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Nexus Clothing Brand Identity</h3>
-<p>Modern clothing brand identity system with logo, typography, and mockups.</p>
-<a href="https://www.behance.net/gallery/250314097/NEXUS-Modern-Clothing-Brand-Identity" target="_blank">View Project →</a>
+<h3>Nexus Brand Identity</h3>
+<p>Full clothing brand identity system including logo, typography, and mockups.</p>
+<a href="https://www.behance.net/gallery/250314097/NEXUS-Modern-Clothing-Brand-Identity" target="_blank">View</a>
 </div>
 
 <div class="card">
-<h3>Luxury Real Estate Campaign</h3>
-<p>High-end marketing visuals for real estate advertising.</p>
-<a href="https://www.behance.net/gallery/250780741/Luxury-Real-Estate-Marketing-Campaign" target="_blank">View Project →</a>
+<h3>Real Estate Campaign</h3>
+<p>Luxury property marketing visuals and advertising system.</p>
+<a href="https://www.behance.net/gallery/250780741/Luxury-Real-Estate-Marketing-Campaign" target="_blank">View</a>
 </div>
 
 <div class="card">
-<h3>Mercedes AMG Visual Edit</h3>
-<p>Automotive cinematic visual composition.</p>
-<a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank">View Project →</a>
+<h3>Automotive Visual Edit</h3>
+<p>Mercedes AMG cinematic visual composition.</p>
+<a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank">View</a>
 </div>
 
 <div class="card">
-<h3>AirPods Max Poster</h3>
-<p>Minimal product advertisement design.</p>
-<a href="https://www.behance.net/gallery/247769459/Apple-AirPods-Max" target="_blank">View Project →</a>
+<h3>Product Posters</h3>
+<p>AirPods Max & luxury product advertisement design system.</p>
+<a href="https://www.behance.net/gallery/247769459/Apple-AirPods-Max" target="_blank">View</a>
 </div>
 
 <div class="card">
-<h3>Luxury Fragrance Poster</h3>
-<p>Premium perfume advertising visualization.</p>
-<a href="https://www.behance.net/gallery/247716583/Luxury-Fragrance-Visualization" target="_blank">View Project →</a>
+<h3>Luxury Fragrance Design</h3>
+<p>Premium perfume visual identity & advertising poster.</p>
+<a href="https://www.behance.net/gallery/247716583/Luxury-Fragrance-Visualization" target="_blank">View</a>
 </div>
 
 <div class="card">
-<h3>Mercedes SL 63 Design</h3>
-<p>Automotive poster & visual identity concept.</p>
-<a href="https://www.behance.net/gallery/247709757/SL-63-Automotive-Design" target="_blank">View Project →</a>
+<h3>Automotive Concept</h3>
+<p>Mercedes SL 63 visual design & composition work.</p>
+<a href="https://www.behance.net/gallery/247709757/SL-63-Automotive-Design" target="_blank">View</a>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+<h2 class="title">Profile</h2>
+
+<div class="info-box">
+I am a junior–intermediate graphic designer focused on visual identity, branding, and social media design.  
+I specialize in creating clean, modern, and visually strong compositions that communicate brand value clearly.
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+<h2 class="title">Skills</h2>
+
+<div class="grid">
+
+<div class="info-box">
+<h3>Adobe Photoshop</h3>
+<div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+<p>Strong experience in posters, ads, and visual compositions.</p>
+</div>
+
+<div class="info-box">
+<h3>Adobe Illustrator</h3>
+<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+<p>Logo design, branding systems, vector-based identity work.</p>
+</div>
+
+<div class="info-box">
+<h3>After Effects</h3>
+<div class="skill-bar"><div class="skill-fill" style="width:25%"></div></div>
+<p>Basic experience (exploring motion graphics).</p>
 </div>
 
 </div>
@@ -237,9 +297,11 @@ I design modern visual systems, social media campaigns, and luxury brand identit
 
 <!-- CONTACT -->
 <section id="contact" class="hidden">
-<h2 class="section-title">Contact</h2>
-<p style="color:#aaa;">Email: h.msaiedahm@gmail.com</p>
-<p style="color:#aaa;">WhatsApp: +20 106 982 6122</p>
+<h2 class="title">Contact</h2>
+<div class="info-box">
+Email: h.msaiedahm@gmail.com<br/>
+WhatsApp: +20 106 982 6122
+</div>
 </section>
 
 <footer>
