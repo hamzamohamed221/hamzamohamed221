@@ -119,7 +119,7 @@ font-weight:600;
 text-decoration:none;
 }
 
-/* PROFILE BOX */
+/* PROFILE */
 .box{
 background:rgba(255,255,255,0.06);
 border:1px solid rgba(255,255,255,0.1);
@@ -128,6 +128,28 @@ border-radius:18px;
 padding:28px;
 color:#aaa;
 line-height:1.8;
+}
+
+.profile-wrap{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+/* PROFILE IMAGE */
+.profile-img{
+width:110px;
+height:110px;
+border-radius:50%;
+background:url("https://i.ibb.co/mfFMqYQ/profile.jpg") center/cover;
+border:2px solid rgba(255,255,255,0.25);
+box-shadow:0 0 30px rgba(255,45,125,0.25);
+flex-shrink:0;
+transition:0.4s;
+}
+
+.profile-img:hover{
+transform:scale(1.05);
 }
 
 /* SKILLS BARS */
@@ -249,6 +271,14 @@ padding:50px;
 color:#666;
 font-size:13px;
 }
+
+/* MOBILE */
+@media(max-width:700px){
+.profile-wrap{
+flex-direction:column;
+text-align:center;
+}
+}
 </style>
 </head>
 
@@ -276,16 +306,23 @@ I design branding systems, social media campaigns, and visual identities that he
 </p>
 </div>
 
-<!-- PROFILE -->
+<!-- PROFILE (WITH IMAGE ADDED) -->
 <section id="about" class="hidden">
 <h2 class="title">Profile</h2>
-<div class="box">
-I am a junior–intermediate graphic designer focused on visual identity, branding systems, and digital campaigns.  
-My work is centered around clean, structured, and modern visual communication that enhances brand perception.
+
+<div class="profile-wrap">
+
+  <div class="profile-img"></div>
+
+  <div class="box">
+  I am a junior–intermediate graphic designer focused on visual identity, branding systems, and digital campaigns.  
+  My work is centered around clean, structured, and modern visual communication that enhances brand perception.
+  </div>
+
 </div>
 </section>
 
-<!-- SKILLS (TEXT + BARS BOTH) -->
+<!-- SKILLS -->
 <section id="skills" class="hidden">
 <h2 class="title">Skills</h2>
 
@@ -293,32 +330,26 @@ My work is centered around clean, structured, and modern visual communication th
 
 <div class="card">
 <h3>Adobe Illustrator</h3>
-<p>
-Strong foundation in vector-based design, logo creation, and brand identity systems. I focus on structured and scalable visual solutions.
-</p>
+<p>Strong foundation in vector-based design, logo creation, and brand identity systems. I focus on structured and scalable visual solutions.</p>
 <div class="bar"><div class="fill ai"></div></div>
 </div>
 
 <div class="card">
 <h3>Adobe Photoshop</h3>
-<p>
-Experienced in creating posters, social media ads, and high-impact visual compositions with strong attention to detail and layout balance.
-</p>
+<p>Experienced in creating posters, social media ads, and high-impact visual compositions with strong attention to detail and layout balance.</p>
 <div class="bar"><div class="fill ps"></div></div>
 </div>
 
 <div class="card">
 <h3>After Effects</h3>
-<p>
-Basic exposure to motion design and animation principles. Currently exploring transitions and simple motion visuals.
-</p>
+<p>Basic exposure to motion design and animation principles. Currently exploring transitions and simple motion visuals.</p>
 <div class="bar"><div class="fill ae"></div></div>
 </div>
 
 </div>
 </section>
 
-<!-- SOCIALS (RE-ADDED) -->
+<!-- SOCIALS -->
 <section id="social" class="hidden">
 <h2 class="title">Social Presence</h2>
 
