@@ -54,9 +54,7 @@ text-decoration:none;
 transition:0.3s;
 }
 
-nav a:hover{
-color:#fff;
-}
+nav a:hover{color:#fff;}
 
 /* HERO */
 .hero{
@@ -98,7 +96,6 @@ gap:22px;
 background:rgba(255,255,255,0.06);
 border:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
 border-radius:18px;
 padding:24px;
 transition:0.4s;
@@ -111,15 +108,8 @@ border:1px solid rgba(255,45,125,0.4);
 box-shadow:0 20px 70px rgba(255,45,125,0.15);
 }
 
-.card h3{
-margin-bottom:10px;
-}
-
-.card p{
-color:#aaa;
-font-size:14px;
-line-height:1.6;
-}
+.card h3{margin-bottom:10px;}
+.card p{color:#aaa;font-size:14px;line-height:1.6;}
 
 .card a{
 display:inline-block;
@@ -138,6 +128,73 @@ border-radius:18px;
 padding:28px;
 color:#aaa;
 line-height:1.8;
+}
+
+/* SKILLS BARS */
+.skill{
+margin-bottom:22px;
+}
+
+.bar{
+width:100%;
+height:8px;
+background:#222;
+border-radius:50px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.fill{
+height:100%;
+border-radius:50px;
+}
+
+.fill.ai{
+width:92%;
+background:linear-gradient(90deg,#ff2d7d,#7c3aed);
+}
+
+.fill.ps{
+width:82%;
+background:linear-gradient(90deg,#ff2d7d,#ff7aa2);
+}
+
+.fill.ae{
+width:25%;
+background:linear-gradient(90deg,#444,#777);
+}
+
+/* SOCIALS */
+.social-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.social{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(14px);
+padding:25px;
+border-radius:18px;
+text-align:center;
+transition:0.4s;
+}
+
+.social:hover{
+transform:translateY(-10px);
+border:1px solid rgba(255,45,125,0.4);
+}
+
+.social a{
+display:inline-block;
+margin-top:12px;
+padding:10px 16px;
+background:#fff;
+color:#000;
+border-radius:10px;
+font-weight:700;
+text-decoration:none;
 }
 
 /* CONTACT */
@@ -205,6 +262,7 @@ font-size:13px;
 <div>
 <a href="#about">Profile</a>
 <a href="#skills">Skills</a>
+<a href="#social">Socials</a>
 <a href="#work">Work</a>
 <a href="#contact">Contact</a>
 </div>
@@ -214,20 +272,20 @@ font-size:13px;
 <div class="hero">
 <h1>Luxury Visual Identity Studio</h1>
 <p>
-I design branding systems, social media campaigns, and visual identities that help modern brands communicate with clarity, elegance, and impact.
+I design branding systems, social media campaigns, and visual identities that help modern brands communicate with clarity and impact.
 </p>
 </div>
 
-<!-- PROFILE (RESTORED + IMPROVED) -->
+<!-- PROFILE -->
 <section id="about" class="hidden">
 <h2 class="title">Profile</h2>
 <div class="box">
 I am a junior–intermediate graphic designer focused on visual identity, branding systems, and digital campaigns.  
-My work is centered around creating clean, structured, and visually compelling designs that communicate brand value in a clear and modern way.
+My work is centered around clean, structured, and modern visual communication that enhances brand perception.
 </div>
 </section>
 
-<!-- SKILLS (EXPLAINED, NOT BARS) -->
+<!-- SKILLS (TEXT + BARS BOTH) -->
 <section id="skills" class="hidden">
 <h2 class="title">Skills</h2>
 
@@ -236,25 +294,49 @@ My work is centered around creating clean, structured, and visually compelling d
 <div class="card">
 <h3>Adobe Illustrator</h3>
 <p>
-Strong foundation in vector-based design, logo creation, and visual identity systems.  
-I focus on building structured brand assets with clean geometry and scalable design thinking.
+Strong foundation in vector-based design, logo creation, and brand identity systems. I focus on structured and scalable visual solutions.
 </p>
+<div class="bar"><div class="fill ai"></div></div>
 </div>
 
 <div class="card">
 <h3>Adobe Photoshop</h3>
 <p>
-Experienced in creating high-impact posters, social media ads, and product visuals.  
-I specialize in composition, lighting balance, and modern advertising layouts.
+Experienced in creating posters, social media ads, and high-impact visual compositions with strong attention to detail and layout balance.
 </p>
+<div class="bar"><div class="fill ps"></div></div>
 </div>
 
 <div class="card">
 <h3>After Effects</h3>
 <p>
-Basic exposure to motion design and animation principles.  
-Currently developing skills in visual transitions and simple motion branding elements.
+Basic exposure to motion design and animation principles. Currently exploring transitions and simple motion visuals.
 </p>
+<div class="bar"><div class="fill ae"></div></div>
+</div>
+
+</div>
+</section>
+
+<!-- SOCIALS (RE-ADDED) -->
+<section id="social" class="hidden">
+<h2 class="title">Social Presence</h2>
+
+<div class="social-grid">
+
+<div class="social">
+<h3>Behance</h3>
+<a href="https://www.behance.net/hamzaahmed22" target="_blank">View Profile</a>
+</div>
+
+<div class="social">
+<h3>Instagram</h3>
+<a href="https://www.instagram.com/hamza.designs11/" target="_blank">Follow</a>
+</div>
+
+<div class="social">
+<h3>TikTok</h3>
+<a href="https://www.tiktok.com/@hamza.designs11" target="_blank">Watch</a>
 </div>
 
 </div>
@@ -277,7 +359,7 @@ Currently developing skills in visual transitions and simple motion branding ele
 </div>
 
 <div class="card">
-<h3>Automotive Visual Edit</h3>
+<h3>Mercedes AMG Visual Edit</h3>
 <a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank">Open Case Study</a>
 </div>
 
