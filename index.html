@@ -22,7 +22,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* luxury glow */
+/* glow */
 .bg{
 position:fixed;
 width:1000px;
@@ -73,23 +73,7 @@ line-height:1.05;
 margin-top:20px;
 color:#aaa;
 font-size:18px;
-max-width:650px;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 26px;
-background:#fff;
-color:#000;
-font-weight:700;
-border-radius:14px;
-text-decoration:none;
-transition:0.4s;
-}
-
-.btn:hover{
-transform:translateY(-4px) scale(1.03);
+max-width:700px;
 }
 
 /* SECTION */
@@ -118,7 +102,6 @@ backdrop-filter:blur(14px);
 border-radius:18px;
 padding:24px;
 transition:0.4s;
-cursor:pointer;
 overflow:hidden;
 }
 
@@ -128,8 +111,15 @@ border:1px solid rgba(255,45,125,0.4);
 box-shadow:0 20px 70px rgba(255,45,125,0.15);
 }
 
-.card h3{margin-bottom:10px;}
-.card p{color:#aaa;font-size:14px;}
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
+line-height:1.6;
+}
 
 .card a{
 display:inline-block;
@@ -139,71 +129,15 @@ font-weight:600;
 text-decoration:none;
 }
 
-/* SKILL BARS */
-.skill{
-margin-bottom:20px;
-}
-
-.bar{
-width:100%;
-height:8px;
-background:#222;
-border-radius:50px;
-overflow:hidden;
-margin-top:8px;
-}
-
-.fill{
-height:100%;
-border-radius:50px;
-}
-
-.fill.ps{
-width:82%;
-background:linear-gradient(90deg,#ff2d7d,#ff7aa2);
-}
-
-.fill.ai{
-width:92%; /* Illustrator stronger */
-background:linear-gradient(90deg,#ff2d7d,#7c3aed);
-}
-
-.fill.ae{
-width:25%;
-background:linear-gradient(90deg,#444,#777);
-}
-
-/* SOCIAL LINKS */
-.social-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-.social{
+/* PROFILE BOX */
+.box{
 background:rgba(255,255,255,0.06);
 border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:blur(12px);
-padding:25px;
+backdrop-filter:blur(14px);
 border-radius:18px;
-text-align:center;
-transition:0.4s;
-}
-
-.social:hover{
-transform:translateY(-10px);
-border:1px solid rgba(255,45,125,0.4);
-}
-
-.social a{
-display:inline-block;
-margin-top:12px;
-padding:10px 16px;
-background:#fff;
-color:#000;
-border-radius:10px;
-font-weight:700;
-text-decoration:none;
+padding:28px;
+color:#aaa;
+line-height:1.8;
 }
 
 /* CONTACT */
@@ -216,7 +150,7 @@ gap:20px;
 .contact-card{
 background:rgba(255,255,255,0.06);
 border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(14px);
 padding:30px;
 border-radius:18px;
 text-align:center;
@@ -225,6 +159,7 @@ transition:0.4s;
 
 .contact-card:hover{
 transform:translateY(-10px);
+border:1px solid rgba(255,45,125,0.4);
 }
 
 .contact-btn{
@@ -236,15 +171,8 @@ font-weight:700;
 text-decoration:none;
 }
 
-.email{
-background:#fff;
-color:#000;
-}
-
-.whatsapp{
-background:#25D366;
-color:#000;
-}
+.email{background:#fff;color:#000;}
+.whatsapp{background:#25D366;color:#000;}
 
 /* animation */
 .hidden{
@@ -275,8 +203,8 @@ font-size:13px;
 <nav>
 <h2>HZ.DESIGNS</h2>
 <div>
+<a href="#about">Profile</a>
 <a href="#skills">Skills</a>
-<a href="#social">Social</a>
 <a href="#work">Work</a>
 <a href="#contact">Contact</a>
 </div>
@@ -286,56 +214,53 @@ font-size:13px;
 <div class="hero">
 <h1>Luxury Visual Identity Studio</h1>
 <p>
-I design branding systems, social media campaigns, and modern visual identities for premium brands.
+I design branding systems, social media campaigns, and visual identities that help modern brands communicate with clarity, elegance, and impact.
 </p>
-<a class="btn" href="#skills">Explore</a>
 </div>
 
-<!-- SKILLS (now earlier) -->
+<!-- PROFILE (RESTORED + IMPROVED) -->
+<section id="about" class="hidden">
+<h2 class="title">Profile</h2>
+<div class="box">
+I am a junior–intermediate graphic designer focused on visual identity, branding systems, and digital campaigns.  
+My work is centered around creating clean, structured, and visually compelling designs that communicate brand value in a clear and modern way.
+</div>
+</section>
+
+<!-- SKILLS (EXPLAINED, NOT BARS) -->
 <section id="skills" class="hidden">
 <h2 class="title">Skills</h2>
 
-<div class="skill">
+<div class="grid">
+
+<div class="card">
 <h3>Adobe Illustrator</h3>
-<div class="bar"><div class="fill ai"></div></div>
+<p>
+Strong foundation in vector-based design, logo creation, and visual identity systems.  
+I focus on building structured brand assets with clean geometry and scalable design thinking.
+</p>
 </div>
 
-<div class="skill">
+<div class="card">
 <h3>Adobe Photoshop</h3>
-<div class="bar"><div class="fill ps"></div></div>
+<p>
+Experienced in creating high-impact posters, social media ads, and product visuals.  
+I specialize in composition, lighting balance, and modern advertising layouts.
+</p>
 </div>
 
-<div class="skill">
+<div class="card">
 <h3>After Effects</h3>
-<div class="bar"><div class="fill ae"></div></div>
-</div>
-</section>
-
-<!-- SOCIAL LINKS -->
-<section id="social" class="hidden">
-<h2 class="title">My Socials</h2>
-
-<div class="social-grid">
-
-<div class="social">
-<h3>Behance</h3>
-<a href="https://www.behance.net/hamzaahmed22" target="_blank">View Profile</a>
-</div>
-
-<div class="social">
-<h3>Instagram</h3>
-<a href="https://www.instagram.com/hamza.designs11/" target="_blank">Follow</a>
-</div>
-
-<div class="social">
-<h3>TikTok</h3>
-<a href="https://www.tiktok.com/@hamza.designs11" target="_blank">Watch</a>
+<p>
+Basic exposure to motion design and animation principles.  
+Currently developing skills in visual transitions and simple motion branding elements.
+</p>
 </div>
 
 </div>
 </section>
 
-<!-- WORK (before end) -->
+<!-- WORK -->
 <section id="work" class="hidden">
 <h2 class="title">Selected Work</h2>
 
@@ -352,31 +277,31 @@ I design branding systems, social media campaigns, and modern visual identities 
 </div>
 
 <div class="card">
-<h3>Mercedes AMG Visual</h3>
+<h3>Automotive Visual Edit</h3>
 <a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank">Open Case Study</a>
 </div>
 
 <div class="card">
-<h3>Luxury Posters</h3>
+<h3>Product Posters</h3>
 <a href="https://www.behance.net/gallery/247769459/Apple-AirPods-Max" target="_blank">Open Case Study</a>
 </div>
 
 <div class="card">
-<h3>Fragrance Design</h3>
+<h3>Fragrance Campaign</h3>
 <a href="https://www.behance.net/gallery/247716583/Luxury-Fragrance-Visualization" target="_blank">Open Case Study</a>
 </div>
 
 <div class="card">
-<h3>SL 63 Concept</h3>
+<h3>Automotive Concept</h3>
 <a href="https://www.behance.net/gallery/247709757/SL-63-Automotive-Design" target="_blank">Open Case Study</a>
 </div>
 
 </div>
 </section>
 
-<!-- CONTACT LAST -->
+<!-- CONTACT -->
 <section id="contact" class="hidden">
-<h2 class="title">Let’s Work Together</h2>
+<h2 class="title">Contact</h2>
 
 <div class="contact">
 
@@ -388,8 +313,9 @@ I design branding systems, social media campaigns, and modern visual identities 
 <div class="contact-card">
 <h3>WhatsApp</h3>
 <a class="contact-btn whatsapp"
-href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20am%20looking%20for%20help%20with%20my%20project.%20Can%20you%20help%20me%3F"
-target="_blank">Message Me</a>
+href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20am%20looking%20for%20help%20with%20my%20project.%20Can%20you%20help%20me%3F">
+Message Me
+</a>
 </div>
 
 </div>
