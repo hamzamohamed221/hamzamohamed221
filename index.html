@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hamza Design — Visual Identity Designer</title>
+<title>Hamza Design — Studio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -13,6 +13,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Inter;
+scroll-behavior:smooth;
 }
 
 body{
@@ -21,15 +22,15 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* cinematic background */
+/* luxury glow */
 .bg{
 position:fixed;
-width:800px;
-height:800px;
-background:radial-gradient(circle,#ff2d7d33,transparent 60%);
-top:-250px;
-right:-250px;
-filter:blur(80px);
+width:900px;
+height:900px;
+background:radial-gradient(circle,#ff2d7d22,transparent 60%);
+top:-300px;
+right:-300px;
+filter:blur(90px);
 z-index:-1;
 }
 
@@ -42,8 +43,8 @@ align-items:center;
 }
 
 nav h2{
-letter-spacing:2px;
 font-size:18px;
+letter-spacing:3px;
 }
 
 nav a{
@@ -59,12 +60,12 @@ color:#fff;
 
 /* HERO */
 .hero{
-padding:120px 8% 80px;
+padding:130px 8% 90px;
 max-width:900px;
 }
 
 .hero h1{
-font-size:64px;
+font-size:68px;
 line-height:1.05;
 animation:fadeUp 1s ease;
 }
@@ -77,20 +78,23 @@ max-width:650px;
 animation:fadeUp 1.2s ease;
 }
 
+/* BUTTONS (luxury feel) */
 .btn{
 display:inline-block;
 margin-top:30px;
-padding:12px 22px;
-background:#fff;
+padding:14px 26px;
+background:linear-gradient(90deg,#fff,#ddd);
 color:#000;
-font-weight:600;
-border-radius:10px;
+font-weight:700;
+border-radius:12px;
 text-decoration:none;
-transition:0.3s;
+transition:0.4s;
+box-shadow:0 10px 30px rgba(255,255,255,0.05);
 }
 
 .btn:hover{
-transform:scale(1.05);
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 15px 50px rgba(255,45,125,0.2);
 }
 
 /* SECTIONS */
@@ -99,30 +103,30 @@ padding:90px 8%;
 }
 
 .title{
-font-size:28px;
+font-size:30px;
 margin-bottom:30px;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:22px;
 }
 
-/* CARD */
+/* CARDS */
 .card{
 background:#141420;
-padding:22px;
-border-radius:16px;
-transition:0.4s;
+padding:24px;
+border-radius:18px;
+transition:0.5s;
 position:relative;
 overflow:hidden;
 }
 
 .card:hover{
 transform:translateY(-12px);
-box-shadow:0 15px 50px rgba(255,45,125,0.18);
+box-shadow:0 20px 60px rgba(255,45,125,0.15);
 }
 
 .card h3{
@@ -138,29 +142,70 @@ font-size:14px;
 display:inline-block;
 margin-top:15px;
 color:#ff2d7d;
-text-decoration:none;
 font-weight:600;
+text-decoration:none;
+transition:0.3s;
 }
 
-/* PROFILE + SKILLS */
-.info-box{
+.card a:hover{
+letter-spacing:1px;
+}
+
+/* PROFILE BOX */
+.box{
 background:#141420;
 padding:25px;
-border-radius:16px;
+border-radius:18px;
 color:#aaa;
+line-height:1.6;
 }
 
-.skill-bar{
+/* CONTACT LUXURY CARDS */
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.contact-card{
+background:#141420;
+padding:30px;
+border-radius:18px;
+text-align:center;
+transition:0.4s;
+}
+
+.contact-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 60px rgba(255,45,125,0.15);
+}
+
+.contact-card h3{
+margin-bottom:15px;
+}
+
+.contact-btn{
+display:inline-block;
 margin-top:10px;
-background:#222;
-height:8px;
-border-radius:50px;
-overflow:hidden;
+padding:12px 18px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+transition:0.3s;
 }
 
-.skill-fill{
-height:100%;
-background:linear-gradient(90deg,#ff2d7d,#7c3aed);
+.email-btn{
+background:#fff;
+color:#000;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:#000;
+}
+
+.contact-btn:hover{
+transform:scale(1.05);
 }
 
 /* animation */
@@ -182,7 +227,7 @@ transform:translateY(0);
 
 footer{
 text-align:center;
-padding:40px;
+padding:50px;
 color:#666;
 font-size:13px;
 }
@@ -195,7 +240,7 @@ font-size:13px;
 
 <!-- NAV -->
 <nav>
-<h2>HZ.DESIGN</h2>
+<h2>HZ.STUDIO</h2>
 <div>
 <a href="#work">Work</a>
 <a href="#about">About</a>
@@ -206,53 +251,53 @@ font-size:13px;
 
 <!-- HERO -->
 <div class="hero">
-<h1>Visual Identity Designer</h1>
+<h1>Luxury Visual Identity Studio</h1>
 <p>
-I create modern branding systems, social media campaigns, and luxury visual identities for businesses that want to stand out.
+I design high-end branding systems, social media campaigns, and visual identities for modern businesses and luxury brands.
 </p>
-<a class="btn" href="#work">Explore Work</a>
+<a class="btn" href="#work">View Studio Work</a>
 </div>
 
 <!-- WORK -->
 <section id="work" class="hidden">
-<h2 class="title">Selected Projects</h2>
+<h2 class="title">Selected Work</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Nexus Brand Identity</h3>
-<p>Full clothing brand identity system including logo, typography, and mockups.</p>
-<a href="https://www.behance.net/gallery/250314097/NEXUS-Modern-Clothing-Brand-Identity" target="_blank">View</a>
+<p>Complete clothing brand identity system.</p>
+<a href="https://www.behance.net/gallery/250314097/NEXUS-Modern-Clothing-Brand-Identity" target="_blank">Open Case Study →</a>
 </div>
 
 <div class="card">
 <h3>Real Estate Campaign</h3>
-<p>Luxury property marketing visuals and advertising system.</p>
-<a href="https://www.behance.net/gallery/250780741/Luxury-Real-Estate-Marketing-Campaign" target="_blank">View</a>
+<p>Luxury property marketing visuals.</p>
+<a href="https://www.behance.net/gallery/250780741/Luxury-Real-Estate-Marketing-Campaign" target="_blank">Open Case Study →</a>
 </div>
 
 <div class="card">
-<h3>Automotive Visual Edit</h3>
-<p>Mercedes AMG cinematic visual composition.</p>
-<a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank">View</a>
+<h3>Automotive Visuals</h3>
+<p>Mercedes AMG cinematic composition.</p>
+<a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank">Open Case Study →</a>
 </div>
 
 <div class="card">
-<h3>Product Posters</h3>
-<p>AirPods Max & luxury product advertisement design system.</p>
-<a href="https://www.behance.net/gallery/247769459/Apple-AirPods-Max" target="_blank">View</a>
+<h3>Product Design Posters</h3>
+<p>Luxury product advertising visuals.</p>
+<a href="https://www.behance.net/gallery/247769459/Apple-AirPods-Max" target="_blank">Open Case Study →</a>
 </div>
 
 <div class="card">
-<h3>Luxury Fragrance Design</h3>
-<p>Premium perfume visual identity & advertising poster.</p>
-<a href="https://www.behance.net/gallery/247716583/Luxury-Fragrance-Visualization" target="_blank">View</a>
+<h3>Fragrance Campaign</h3>
+<p>High-end perfume visual identity.</p>
+<a href="https://www.behance.net/gallery/247716583/Luxury-Fragrance-Visualization" target="_blank">Open Case Study →</a>
 </div>
 
 <div class="card">
 <h3>Automotive Concept</h3>
-<p>Mercedes SL 63 visual design & composition work.</p>
-<a href="https://www.behance.net/gallery/247709757/SL-63-Automotive-Design" target="_blank">View</a>
+<p>Mercedes SL 63 design system.</p>
+<a href="https://www.behance.net/gallery/247709757/SL-63-Automotive-Design" target="_blank">Open Case Study →</a>
 </div>
 
 </div>
@@ -261,10 +306,9 @@ I create modern branding systems, social media campaigns, and luxury visual iden
 <!-- ABOUT -->
 <section id="about" class="hidden">
 <h2 class="title">Profile</h2>
-
-<div class="info-box">
-I am a junior–intermediate graphic designer focused on visual identity, branding, and social media design.  
-I specialize in creating clean, modern, and visually strong compositions that communicate brand value clearly.
+<div class="box">
+Junior–intermediate graphic designer specializing in visual identity, branding systems, and social media campaigns.  
+Focused on clean, modern, and luxury-driven design that communicates brand value clearly and effectively.
 </div>
 </section>
 
@@ -274,22 +318,19 @@ I specialize in creating clean, modern, and visually strong compositions that co
 
 <div class="grid">
 
-<div class="info-box">
+<div class="box">
 <h3>Adobe Photoshop</h3>
-<div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
 <p>Strong experience in posters, ads, and visual compositions.</p>
 </div>
 
-<div class="info-box">
+<div class="box">
 <h3>Adobe Illustrator</h3>
-<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-<p>Logo design, branding systems, vector-based identity work.</p>
+<p>Brand identity systems, logos, and vector-based design.</p>
 </div>
 
-<div class="info-box">
+<div class="box">
 <h3>After Effects</h3>
-<div class="skill-bar"><div class="skill-fill" style="width:25%"></div></div>
-<p>Basic experience (exploring motion graphics).</p>
+<p>Basic knowledge — explored motion design once.</p>
 </div>
 
 </div>
@@ -297,19 +338,37 @@ I specialize in creating clean, modern, and visually strong compositions that co
 
 <!-- CONTACT -->
 <section id="contact" class="hidden">
-<h2 class="title">Contact</h2>
-<div class="info-box">
-Email: h.msaiedahm@gmail.com<br/>
-WhatsApp: +20 106 982 6122
+<h2 class="title">Let’s Work Together</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Email</h3>
+<p>For business inquiries & collaborations</p>
+<a class="contact-btn email-btn" href="mailto:h.msaiedahm@gmail.com">
+Send Email
+</a>
+</div>
+
+<div class="contact-card">
+<h3>WhatsApp</h3>
+<p>Quick chat & project discussions</p>
+<a class="contact-btn whatsapp-btn"
+href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20am%20looking%20for%20help%20with%20my%20project.%20Could%20you%20help%20me%20with%20it?"
+target="_blank">
+Message Me
+</a>
+</div>
+
 </div>
 </section>
 
 <footer>
-© 2026 Hamza Design — Visual Identity & Branding
+© 2026 Hamza Studio — Visual Identity & Branding
 </footer>
 
 <script>
-// scroll animation
+// scroll reveal
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
