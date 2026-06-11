@@ -234,8 +234,9 @@
            ============================================ */
         .work-image {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
             border-radius: 12px;
             margin-bottom: 16px;
             transition: transform 0.4s ease;
@@ -457,7 +458,7 @@
             section { padding: 60px 8%; }
             .profile-wrap { flex-direction: column; text-align: center; }
             .grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-            .work-image { height: 200px; }
+            .work-image { max-height: 250px; }
         }
 
         @media (max-width: 480px) {
@@ -468,7 +469,7 @@
             .hero h1 { font-size: clamp(28px, 7vw, 40px); }
             section { padding: 40px 5%; }
             .grid { grid-template-columns: 1fr; }
-            .work-image { height: 180px; }
+            .work-image { max-height: 200px; }
         }
 
         /* Skip link for accessibility */
@@ -590,7 +591,7 @@
     
     <div class="grid">
         <div class="card work-card">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/86c7a5247709757.69e0eb2baeac9.png" alt="Mercedes SL 63 Automotive Design - Luxury automotive poster" class="work-image" loading="lazy">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/86c7a5247709757.69e0eb2baeac9.png" alt="Mercedes SL 63 Automotive Design - Luxury automotive poster" class="work-image" loading="lazy">
             <h3>Mercedes SL 63 Automotive Design</h3>
             <p>Luxury automotive poster design focused on premium presentation and performance storytelling.</p>
         </div>
