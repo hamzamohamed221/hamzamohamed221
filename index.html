@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HZ.DESIGNS - Luxury Visual Identity Studio. Professional graphic designer specializing in branding systems, visual identities, and digital campaigns.">
-    <meta name="keywords" content="graphic design, branding, visual identity, logo design, digital campaigns, luxury design">
+
+    <meta name="description" content="HZ.DESIGNS - Brand Identity, UI & Visual Design. Professional graphic designer specializing in branding systems, visual identities, digital campaigns, and premium UI design.">
+    <meta name="keywords" content="graphic design, branding, visual identity, logo design, digital campaigns, UI design">
     <meta name="author" content="Hamza Mohamed">
-    <meta name="theme-color" content="#242320">
-    
+    <meta name="theme-color" content="#07070b">
+
     <title>HZ.DESIGNS — Brand Identity, UI & Visual Design | Graphic Designer</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
     <style>
+
         /* ============================================
            GLOBAL STYLES & RESET
            ============================================ */
+
         * {
             margin: 0;
             padding: 0;
@@ -37,13 +44,18 @@
         }
 
         /* ============================================
-           BACKGROUND GLOW EFFECT
+           BACKGROUND GLOW
            ============================================ */
+
         .bg {
             position: fixed;
             width: 1000px;
             height: 1000px;
-            background: radial-gradient(circle, #ff2d7d22, transparent 60%);
+            background: radial-gradient(
+                circle,
+                #ff2d7d22,
+                transparent 60%
+            );
             top: -350px;
             right: -350px;
             filter: blur(100px);
@@ -54,16 +66,22 @@
         /* ============================================
            NAVIGATION
            ============================================ */
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             padding: 30px 8%;
+
             position: sticky;
             top: 0;
+
             background: rgba(7, 7, 11, 0.8);
             backdrop-filter: blur(10px);
+
             z-index: 100;
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -84,7 +102,9 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
+
             transition: color 0.3s ease;
+
             position: relative;
         }
 
@@ -97,12 +117,20 @@
 
         nav a::after {
             content: '';
+
             position: absolute;
             bottom: -5px;
             left: 0;
+
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #ff2d7d, #7c3aed);
+
+            background: linear-gradient(
+                90deg,
+                #ff2d7d,
+                #7c3aed
+            );
+
             transition: width 0.3s ease;
         }
 
@@ -112,8 +140,9 @@
         }
 
         /* ============================================
-           HERO SECTION
+           HERO
            ============================================ */
+
         .hero {
             padding: 140px 8% 90px;
             max-width: 900px;
@@ -128,15 +157,20 @@
 
         .hero p {
             margin-top: 20px;
+
             color: #aaa;
+
             font-size: 18px;
+
             max-width: 700px;
+
             line-height: 1.8;
         }
 
         /* ============================================
            SECTIONS
            ============================================ */
+
         section {
             padding: 90px 8%;
         }
@@ -144,7 +178,10 @@
         .section {
             opacity: 0;
             transform: translateY(40px);
-            transition: all 0.8s ease-out;
+
+            transition:
+                opacity 0.8s ease-out,
+                transform 0.8s ease-out;
         }
 
         .section.visible {
@@ -155,42 +192,72 @@
         .title {
             font-size: 32px;
             font-weight: 700;
+
             margin-bottom: 40px;
+
             letter-spacing: -0.5px;
         }
 
         /* ============================================
-           GRID LAYOUT
+           GRID
            ============================================ */
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
             gap: 24px;
         }
 
         /* ============================================
            CARDS
            ============================================ */
+
         .card {
             background: rgba(255, 255, 255, 0.06);
+
             border: 1px solid rgba(255, 255, 255, 0.1);
+
             backdrop-filter: blur(14px);
+
             border-radius: 18px;
+
             padding: 28px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+            transition:
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                border 0.4s ease,
+                box-shadow 0.4s ease;
+
             overflow: hidden;
+
             position: relative;
         }
 
         .card::before {
             content: '';
+
             position: absolute;
+
             top: 0;
             left: -100%;
+
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 45, 125, 0.1), transparent);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 45, 125, 0.1),
+                    transparent
+                );
+
             transition: left 0.6s ease;
+
+            pointer-events: none;
         }
 
         .card:hover::before {
@@ -199,48 +266,73 @@
 
         .card:hover {
             transform: translateY(-8px);
-            border: 1px solid rgba(255, 45, 125, 0.4);
-            box-shadow: 0 20px 70px rgba(255, 45, 125, 0.15);
+
+            border:
+                1px solid rgba(255, 45, 125, 0.4);
+
+            box-shadow:
+                0 20px 70px rgba(255, 45, 125, 0.15);
         }
 
         .card h3 {
             margin-bottom: 12px;
+
             font-size: 18px;
             font-weight: 700;
         }
 
         .card p {
             color: #aaa;
+
             font-size: 14px;
+
             line-height: 1.7;
         }
 
         .card a {
             display: inline-block;
+
             margin-top: 15px;
+
             color: #ff2d7d;
+
             font-weight: 600;
+
             text-decoration: none;
+
             transition: all 0.3s ease;
         }
 
         .card a:hover {
             color: #ff5a9b;
+
             transform: translateX(4px);
         }
 
         /* ============================================
-           WORK CARDS
+           WORK IMAGES
            ============================================ */
+
         .work-image {
             width: 100%;
             height: auto;
+
             max-height: 300px;
+
             object-fit: contain;
+
             border-radius: 12px;
+
             margin-bottom: 16px;
+
             transition: transform 0.4s ease;
-            background: linear-gradient(135deg, #222, #333);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #222,
+                    #333
+                );
         }
 
         .work-card:hover .work-image {
@@ -248,771 +340,1804 @@
         }
 
         /* ============================================
-           PROFILE SECTION
+           PROFILE
            ============================================ */
+
         .profile-wrap {
             display: flex;
+
             align-items: center;
+
             gap: 30px;
         }
 
         .profile-img {
             width: 120px;
             height: 120px;
+
             border-radius: 50%;
-            background: url("https://i.ibb.co/mfFMqYQ/profile.jpg") center/cover;
-            border: 2px solid rgba(255, 255, 255, 0.25);
-            box-shadow: 0 0 30px rgba(255, 45, 125, 0.25);
+
+            background:
+                url("https://i.ibb.co/mfFMqYQ/profile.jpg")
+                center / cover;
+
+            border:
+                2px solid rgba(255, 255, 255, 0.25);
+
+            box-shadow:
+                0 0 30px rgba(255, 45, 125, 0.25);
+
             flex-shrink: 0;
+
             transition: all 0.4s ease;
         }
 
         .profile-img:hover {
             transform: scale(1.08);
-            box-shadow: 0 0 40px rgba(255, 45, 125, 0.4);
+
+            box-shadow:
+                0 0 40px rgba(255, 45, 125, 0.4);
         }
 
         .box {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background:
+                rgba(255, 255, 255, 0.06);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+
             backdrop-filter: blur(14px);
+
             border-radius: 18px;
+
             padding: 30px;
+
             color: #aaa;
+
             line-height: 1.8;
+
             flex: 1;
         }
 
         /* ============================================
            SKILL BARS
            ============================================ */
+
         .skill-bar {
             width: 100%;
+
             height: 8px;
+
             background: #222;
+
             border-radius: 50px;
+
             overflow: hidden;
+
             margin-top: 12px;
+
             position: relative;
         }
 
         .skill-fill {
             height: 100%;
+
             border-radius: 50px;
+
             width: 0;
-            transition: width 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+            transition:
+                width 1.2s cubic-bezier(
+                    0.34,
+                    1.56,
+                    0.64,
+                    1
+                );
         }
 
-        .skill-fill.ai { background: linear-gradient(90deg, #ff2d7d, #7c3aed); }
-        .skill-fill.ps { background: linear-gradient(90deg, #ff2d7d, #ff7aa2); }
-        .skill-fill.ae { background: linear-gradient(90deg, #666, #999); }
+        .skill-fill.ai {
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff2d7d,
+                    #7c3aed
+                );
+        }
+
+        .skill-fill.ps {
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff2d7d,
+                    #ff7aa2
+                );
+        }
+
+        /* Figma now uses the same premium gradient */
+        .skill-fill.figma {
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff2d7d,
+                    #7c3aed
+                );
+        }
 
         .skill-label {
             position: absolute;
+
             right: 8px;
             top: 50%;
+
             transform: translateY(-50%);
+
             font-size: 11px;
+
             font-weight: 600;
+
             color: #fff;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+            text-shadow:
+                0 1px 3px rgba(0, 0, 0, 0.5);
+
+            pointer-events: none;
         }
 
         /* ============================================
-           SOCIAL SECTION
+           SOCIAL
            ============================================ */
+
         .social-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
             gap: 24px;
         }
 
         .social-card {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background:
+                rgba(255, 255, 255, 0.06);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+
             backdrop-filter: blur(14px);
+
             padding: 30px;
+
             border-radius: 18px;
+
             text-align: center;
+
             transition: all 0.4s ease;
         }
 
         .social-card:hover {
             transform: translateY(-8px);
-            border: 1px solid rgba(255, 45, 125, 0.4);
-            box-shadow: 0 20px 70px rgba(255, 45, 125, 0.15);
+
+            border:
+                1px solid rgba(255, 45, 125, 0.4);
+
+            box-shadow:
+                0 20px 70px rgba(255, 45, 125, 0.15);
         }
 
         .social-card h3 {
             font-size: 18px;
+
             font-weight: 700;
+
             margin-bottom: 8px;
         }
 
         .social-card p {
             color: #aaa;
+
             font-size: 13px;
+
             margin-bottom: 16px;
         }
 
         .btn-primary {
             display: inline-block;
+
             padding: 12px 24px;
+
             background: #fff;
+
             color: #000;
+
             border-radius: 10px;
+
             font-weight: 700;
+
             text-decoration: none;
+
             transition: all 0.3s ease;
+
             cursor: pointer;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+
+            box-shadow:
+                0 10px 30px
+                rgba(255, 255, 255, 0.2);
         }
 
-
         /* ============================================
-           SERVICES / HIRE ME SECTION
+           SERVICES
            ============================================ */
+
         .services-intro {
             max-width: 760px;
+
             color: #aaa;
+
             font-size: 16px;
+
             line-height: 1.8;
+
             margin-top: -18px;
+
             margin-bottom: 34px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
             gap: 24px;
         }
 
         .service-card {
             position: relative;
+
             overflow: hidden;
+
             border-radius: 22px;
-            border: 1px solid rgba(255,255,255,.1);
+
+            border:
+                1px solid rgba(255,255,255,.1);
+
             background:
-                linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+                linear-gradient(
+                    180deg,
+                    rgba(255,255,255,.075),
+                    rgba(255,255,255,.035)
+                );
+
             backdrop-filter: blur(16px);
+
             min-height: 520px;
+
             display: flex;
+
             flex-direction: column;
-            transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(255,45,125,.45);
-            box-shadow: 0 24px 80px rgba(255,45,125,.12);
+
+            border-color:
+                rgba(255,45,125,.45);
+
+            box-shadow:
+                0 24px 80px
+                rgba(255,45,125,.12);
         }
 
         .service-visual {
             width: 100%;
+
             aspect-ratio: 16 / 10;
-            background:
-                radial-gradient(circle at 78% 20%, rgba(124,58,237,.30), transparent 32%),
-                radial-gradient(circle at 22% 70%, rgba(255,45,125,.22), transparent 35%),
-                #111117;
-            border-bottom: 1px solid rgba(255,255,255,.08);
-            display: flex;
-            align-items: flex-end;
-            padding: 22px;
-            color: rgba(255,255,255,.76);
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+
+            overflow: hidden;
+
+            background: #111117;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.08);
+
+            flex-shrink: 0;
+        }
+
+        .service-visual img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform .4s ease;
+        }
+
+        .service-card:hover
+        .service-visual img {
+            transform: scale(1.04);
         }
 
         .service-body {
             padding: 26px;
+
             display: flex;
+
             flex-direction: column;
+
             flex: 1;
         }
 
         .service-kicker {
             color: #ff2d7d;
+
             font-size: 11px;
+
             font-weight: 700;
+
             letter-spacing: 2px;
+
             text-transform: uppercase;
+
             margin-bottom: 10px;
         }
 
         .service-card h3 {
             font-size: 24px;
+
             line-height: 1.25;
+
             margin-bottom: 12px;
         }
 
         .service-desc {
             color: #aaa;
+
             font-size: 14px;
+
             line-height: 1.75;
+
             margin-bottom: 22px;
         }
 
         .service-list {
             list-style: none;
+
             display: grid;
+
             gap: 10px;
+
             margin-bottom: 26px;
         }
 
         .service-list li {
             color: #d8d8dc;
+
             font-size: 13px;
+
             padding-left: 18px;
+
             position: relative;
         }
 
         .service-list li::before {
             content: "•";
+
             position: absolute;
+
             left: 0;
+
             color: #ff2d7d;
         }
 
         .service-price {
             margin-top: auto;
+
             padding-top: 18px;
-            border-top: 1px solid rgba(255,255,255,.08);
+
+            border-top:
+                1px solid rgba(255,255,255,.08);
         }
 
         .service-price strong {
             display: block;
+
             font-size: 26px;
+
             line-height: 1.15;
         }
 
         .service-price span {
             display: block;
+
             color: #888;
+
             font-size: 12px;
+
             margin-top: 5px;
         }
 
         .service-bundles {
             margin-top: 12px;
+
             color: #bbb;
+
             font-size: 12px;
+
             line-height: 1.7;
         }
 
         .service-cta {
             margin-top: 18px;
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
+
             width: 100%;
+
             min-height: 46px;
+
             padding: 12px 18px;
+
             background: #fff;
+
             color: #050507;
+
             text-decoration: none;
+
             border-radius: 12px;
+
             font-size: 13px;
+
             font-weight: 800;
-            transition: transform .25s ease, box-shadow .25s ease;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
         }
 
         .service-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255,255,255,.16);
+
+            box-shadow:
+                0 10px 30px
+                rgba(255,255,255,.16);
         }
 
         .services-note {
             margin-top: 24px;
+
             color: #777;
+
             font-size: 12px;
+
             line-height: 1.7;
         }
 
         /* ============================================
-           CONTACT SECTION
+           CONTACT
            ============================================ */
+
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
             gap: 24px;
         }
 
         .contact-card {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background:
+                rgba(255, 255, 255, 0.06);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+
             backdrop-filter: blur(14px);
+
             padding: 30px;
+
             border-radius: 18px;
+
             text-align: center;
+
             transition: all 0.4s ease;
         }
 
         .contact-card:hover {
             transform: translateY(-8px);
-            border: 1px solid rgba(255, 45, 125, 0.4);
+
+            border:
+                1px solid rgba(255, 45, 125, 0.4);
         }
 
         .contact-card h3 {
             font-size: 18px;
+
             font-weight: 700;
+
             margin-bottom: 8px;
         }
 
         .contact-card p {
             color: #aaa;
+
             font-size: 13px;
+
             margin-bottom: 16px;
         }
 
         .btn-contact {
             display: inline-block;
+
             padding: 14px 28px;
+
             border-radius: 10px;
+
             font-weight: 700;
+
             text-decoration: none;
+
             transition: all 0.3s ease;
+
             cursor: pointer;
         }
 
-        .btn-email { background: #fff; color: #000; }
-        .btn-email:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2); }
+        .btn-email {
+            background: #fff;
+            color: #000;
+        }
 
-        .btn-whatsapp { background: #25D366; color: #000; }
-        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); }
+        .btn-email:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(255,255,255,.2);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #000;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(37,211,102,.3);
+        }
 
         .btn-link {
             color: #ff2d7d;
+
             font-weight: 600;
+
             text-decoration: none;
+
             transition: all 0.3s ease;
         }
 
         .btn-link:hover {
             color: #ff5a9b;
+
             transform: translateX(4px);
         }
 
         /* ============================================
            FOOTER
            ============================================ */
+
         footer {
             text-align: center;
+
             padding: 50px 8%;
+
             color: #666;
+
             font-size: 13px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+            border-top:
+                1px solid rgba(255,255,255,.05);
         }
 
         /* ============================================
-           RESPONSIVE DESIGN
+           RESPONSIVE
            ============================================ */
+
+        @media (max-width: 900px) {
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
         @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 20px; padding: 20px 8%; }
-            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .hero { padding: 100px 8% 60px; }
-            .hero h1 { font-size: clamp(36px, 8vw, 56px); }
-            section { padding: 60px 8%; }
-            .profile-wrap { flex-direction: column; text-align: center; }
-            .grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-            .work-image { max-height: 250px; }
-            .services-grid { grid-template-columns: 1fr; }
+
+            nav {
+                flex-direction: column;
+
+                gap: 20px;
+
+                padding: 20px 8%;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 100px 8% 60px;
+            }
+
+            .hero h1 {
+                font-size:
+                    clamp(36px, 8vw, 56px);
+            }
+
+            section {
+                padding: 60px 8%;
+            }
+
+            .profile-wrap {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .grid {
+                grid-template-columns:
+                    repeat(
+                        auto-fit,
+                        minmax(250px, 1fr)
+                    );
+            }
+
+            .work-image {
+                max-height: 250px;
+            }
+
         }
 
         @media (max-width: 480px) {
-            nav { padding: 16px 5%; }
-            nav ul { gap: 10px; }
-            nav a { font-size: 12px; }
-            .hero { padding: 80px 5% 40px; }
-            .hero h1 { font-size: clamp(28px, 7vw, 40px); }
-            section { padding: 40px 5%; }
-            .grid { grid-template-columns: 1fr; }
-            .work-image { max-height: 200px; }
+
+            nav {
+                padding: 16px 5%;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 80px 5% 40px;
+            }
+
+            .hero h1 {
+                font-size:
+                    clamp(28px, 7vw, 40px);
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .work-image {
+                max-height: 200px;
+            }
+
         }
 
-        /* Skip link for accessibility */
+        /* ============================================
+           ACCESSIBILITY
+           ============================================ */
+
         .skip-link {
             position: absolute;
+
             top: -40px;
             left: 0;
+
             background: #ff2d7d;
+
             color: white;
+
             padding: 8px;
+
             text-decoration: none;
+
             z-index: 1000;
+
             transition: top 0.3s;
         }
-        .skip-link:focus { top: 0; }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
     </style>
 </head>
 
 <body>
 
-<a href="#about" class="skip-link">Skip to main content</a>
+<a href="#about" class="skip-link">
+    Skip to main content
+</a>
+
 <div class="bg"></div>
 
-<!-- NAVIGATION -->
-<nav role="navigation" aria-label="Main navigation">
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+
+<nav
+    role="navigation"
+    aria-label="Main navigation"
+>
+
     <h2>HZ.DESIGNS</h2>
+
     <ul>
-        <li><a href="#about">Profile</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#social">Socials</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+            <a href="#about">Profile</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#social">Socials</a>
+        </li>
+
+        <li>
+            <a href="#work">Work</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
     </ul>
+
 </nav>
 
-<!-- HERO SECTION -->
-<section class="hero" aria-label="Hero section">
-    <h1>Brand Identity, UI & Visual Design</h1>
+<!-- ============================================
+     HERO
+     ============================================ -->
+
+<section
+    class="hero"
+    aria-label="Hero section"
+>
+
+    <h1>
+        Brand Identity, UI & Visual Design
+    </h1>
+
     <p>
-        Creating premium brand identities, high-converting landing pages, and marketing visuals that help businesses look professional and grow with confidence.
+        Creating premium brand identities,
+        high-converting landing pages,
+        and marketing visuals that help
+        businesses look professional and
+        grow with confidence.
     </p>
+
 </section>
 
-<!-- PROFILE SECTION -->
-<section id="about" class="section" aria-label="Profile section">
-    <h2 class="title">Profile</h2>
-    
+<!-- ============================================
+     PROFILE
+     ============================================ -->
+
+<section
+    id="about"
+    class="section"
+    aria-label="Profile section"
+>
+
+    <h2 class="title">
+        Profile
+    </h2>
+
     <div class="profile-wrap">
-        <div class="profile-img" role="img" aria-label="Hamza Mohamed - Graphic Designer"></div>
-        
+
+        <div
+            class="profile-img"
+            role="img"
+            aria-label="Hamza Mohamed - Graphic Designer"
+        ></div>
+
         <div class="box">
-            <p>I am a mid-level graphic designer with 1.5+ years of experience specializing in brand identity, visual systems, social media campaigns, and UI design. I create modern, high-impact visuals that combine strategy, aesthetics, and clarity to help businesses build stronger brands and connect with their audience more effectively.</p>
+
+            <p>
+                I am a mid-level graphic designer
+                with 1.5+ years of experience
+                specializing in brand identity,
+                visual systems, social media
+                campaigns, and UI design.
+                I create modern, high-impact
+                visuals that combine strategy,
+                aesthetics, and clarity to help
+                businesses build stronger brands
+                and connect with their audience
+                more effectively.
+            </p>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- SKILLS SECTION -->
-<section id="skills" class="section" aria-label="Skills section">
-    <h2 class="title">Skills</h2>
-    
-    <div class="grid">
-        <div class="card">
-            <h3>Adobe Illustrator</h3>
-            <p>Strong foundation in vector-based design, logo creation, and brand identity systems. I focus on structured and scalable visual solutions.</p>
-            <div class="skill-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Adobe Illustrator proficiency: 92%">
-                <div class="skill-fill ai" data-width="92%"></div>
-                <span class="skill-label">92%</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h3>Adobe Photoshop</h3>
-            <p>Experienced in creating posters, social media ads, and high-impact visual compositions with strong attention to detail and layout balance.</p>
-            <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Adobe Photoshop proficiency: 82%">
-                <div class="skill-fill ps" data-width="78%"></div>
-                <span class="skill-label">78%</span>
-            </div>
-        </div>
-        
-       <div class="card">
-    <h3>Figma</h3>
-    <p>Designing modern landing pages, premium UI systems, responsive layouts, and developer-friendly interfaces with strong visual hierarchy and user experience principles.</p>
+<!-- ============================================
+     SKILLS
+     ============================================ -->
 
-    <div class="skill-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100" aria-label="Figma proficiency: 97%">
-        <div class="skill-fill" data-width="97%"></div>
-        <span class="skill-label">97%</span>
+<section
+    id="skills"
+    class="section"
+    aria-label="Skills section"
+>
+
+    <h2 class="title">
+        Skills
+    </h2>
+
+    <div class="grid">
+
+        <!-- ILLUSTRATOR -->
+
+        <div class="card">
+
+            <h3>
+                Adobe Illustrator
+            </h3>
+
+            <p>
+                Strong foundation in vector-based
+                design, logo creation, and brand
+                identity systems. I focus on
+                structured and scalable visual
+                solutions.
+            </p>
+
+            <div
+                class="skill-bar"
+                role="progressbar"
+                aria-valuenow="92"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Adobe Illustrator proficiency: 92%"
+            >
+
+                <div
+                    class="skill-fill ai"
+                    data-width="92%"
+                ></div>
+
+                <span class="skill-label">
+                    92%
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- PHOTOSHOP -->
+
+        <div class="card">
+
+            <h3>
+                Adobe Photoshop
+            </h3>
+
+            <p>
+                Experienced in creating posters,
+                social media ads, and high-impact
+                visual compositions with strong
+                attention to detail and layout
+                balance.
+            </p>
+
+            <div
+                class="skill-bar"
+                role="progressbar"
+                aria-valuenow="78"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Adobe Photoshop proficiency: 78%"
+            >
+
+                <div
+                    class="skill-fill ps"
+                    data-width="78%"
+                ></div>
+
+                <span class="skill-label">
+                    78%
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- FIGMA -->
+
+        <div class="card">
+
+            <h3>
+                Figma
+            </h3>
+
+            <p>
+                Designing modern landing pages,
+                premium UI systems, responsive
+                layouts, and developer-friendly
+                interfaces with strong visual
+                hierarchy and user experience
+                principles.
+            </p>
+
+            <div
+                class="skill-bar"
+                role="progressbar"
+                aria-valuenow="97"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Figma proficiency: 97%"
+            >
+
+                <div
+                    class="skill-fill figma"
+                    data-width="97%"
+                ></div>
+
+                <span class="skill-label">
+                    97%
+                </span>
+
+            </div>
+
+        </div>
+
     </div>
-</div>
-<!-- SOCIAL PRESENCE SECTION -->
-<section id="social" class="section" aria-label="Social presence section">
-    <h2 class="title">Social Presence</h2>
-    
+
+</section>
+
+<!-- ============================================
+     SOCIAL PRESENCE
+     ============================================ -->
+
+<section
+    id="social"
+    class="section"
+    aria-label="Social presence section"
+>
+
+    <h2 class="title">
+        Social Presence
+    </h2>
+
     <div class="social-grid">
+
         <div class="social-card">
-            <h3>Behance</h3>
-            <p>View my design portfolio and case studies</p>
-            <a href="https://www.behance.net/hamzaahmed22" target="_blank" rel="noopener noreferrer" class="btn-primary">View Profile</a>
+
+            <h3>
+                Behance
+            </h3>
+
+            <p>
+                View my design portfolio
+                and case studies
+            </p>
+
+            <a
+                href="https://www.behance.net/hamzaahmed22"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+            >
+                View Profile
+            </a>
+
         </div>
-        
+
         <div class="social-card">
-            <h3>Instagram</h3>
-            <p>Follow for daily design inspiration and updates</p>
-            <a href="https://www.instagram.com/hamza.designs11/" target="_blank" rel="noopener noreferrer" class="btn-primary">Follow</a>
+
+            <h3>
+                Instagram
+            </h3>
+
+            <p>
+                Follow for daily design
+                inspiration and updates
+            </p>
+
+            <a
+                href="https://www.instagram.com/hamza.designs11/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+            >
+                Follow
+            </a>
+
         </div>
-        
+
         <div class="social-card">
-            <h3>TikTok</h3>
-            <p>Watch design process videos and quick tips</p>
-            <a href="https://www.tiktok.com/@hz.visuals" target="_blank" rel="noopener noreferrer" class="btn-primary">Watch</a>
+
+            <h3>
+                TikTok
+            </h3>
+
+            <p>
+                Watch design process videos
+                and quick tips
+            </p>
+
+            <a
+                href="https://www.tiktok.com/@hz.visuals"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+            >
+                Watch
+            </a>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- SELECTED WORK SECTION -->
-<section id="work" class="section" aria-label="Selected work section">
-    <h2 class="title">Selected Work</h2>
-    
+<!-- ============================================
+     SELECTED WORK
+     ============================================ -->
+
+<section
+    id="work"
+    class="section"
+    aria-label="Selected work section"
+>
+
+    <h2 class="title">
+        Selected Work
+    </h2>
+
     <div class="grid">
+
+        <!-- MERCEDES -->
+
         <div class="card work-card">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/86c7a5247709757.69e0eb2baeac9.png" alt="Mercedes SL 63 Automotive Design - Luxury automotive poster" class="work-image" loading="lazy">
-            <h3>Mercedes SL 63 Automotive Design</h3>
-            <p>Luxury automotive poster design focused on premium presentation and performance storytelling.</p>
-        </div>
-        
-        <div class="card work-card">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/905e26247716583.69e105ca48bff.png" alt="Luxury Fragrance Campaign - Premium fragrance visualization" class="work-image" loading="lazy">
-            <h3>Luxury Fragrance Campaign</h3>
-            <p>Product-focused advertising visual built around luxury aesthetics and premium branding.</p>
-        </div>
-        
-        <div class="card work-card">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8473a6247769459.69e22eed31e9f.png" alt="AirPods Max Product Poster - Apple product advertisement" class="work-image" loading="lazy">
-            <h3>AirPods Max Product Poster</h3>
-            <p>Modern technology advertisement designed with clean composition and strong visual hierarchy.</p>
-        </div>
-        
-        <div class="card">
-            <h3>Nexus Brand Identity</h3>
-            <p>Complete brand identity system for a modern clothing brand including logo, guidelines, and marketing materials.</p>
-            <a href="https://www.behance.net/gallery/250314097/NEXUS-Modern-Clothing-Brand-Identity" target="_blank" rel="noopener noreferrer" class="btn-link">Open Case Study</a>
-        </div>
-        
-        <div class="card">
-            <h3>Real Estate Campaign</h3>
-            <p>Luxury real estate marketing campaign featuring high-end property visuals and premium branding.</p>
-            <a href="https://www.behance.net/gallery/250780741/Luxury-Real-Estate-Marketing-Campaign" target="_blank" rel="noopener noreferrer" class="btn-link">Open Case Study</a>
+
+            <img
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/86c7a5247709757.69e0eb2baeac9.png"
+                alt="Mercedes SL 63 Automotive Design - Luxury automotive poster"
+                class="work-image"
+                loading="lazy"
+            >
+
+            <h3>
+                Mercedes SL 63 Automotive Design
+            </h3>
+
+            <p>
+                Luxury automotive poster design
+                focused on premium presentation
+                and performance storytelling.
+            </p>
+
         </div>
 
-    
-        <div class="card">
-    <h3>Luxury Villa Presentation</h3>
-    <p>A luxury real estate presentation showcasing a high-end villa through premium architecture, interior design, and lifestyle-focused visual storytelling.</p>
-    <a href="https://www.behance.net/gallery/251238695/-Luxury-Villa-Presentation" target="_blank" rel="noopener noreferrer" class="btn-link">Open Case Study</a>
-</div>
-      
-        <div class="card">
-            <h3>Mercedes AMG Visual Edit</h3>
-            <p>Professional visual edit and enhancement of the Mercedes AMG GT Black Series for premium automotive marketing.</p>
-            <a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank" rel="noopener noreferrer" class="btn-link">Open Case Study</a>
+        <!-- FRAGRANCE -->
+
+        <div class="card work-card">
+
+            <img
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/905e26247716583.69e105ca48bff.png"
+                alt="Luxury Fragrance Campaign - Premium fragrance visualization"
+                class="work-image"
+                loading="lazy"
+            >
+
+            <h3>
+                Luxury Fragrance Campaign
+            </h3>
+
+            <p>
+                Product-focused advertising visual
+                built around luxury aesthetics and
+                premium branding.
+            </p>
+
         </div>
+
+        <!-- AIRPODS -->
+
+        <div class="card work-card">
+
+            <img
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8473a6247769459.69e22eed31e9f.png"
+                alt="AirPods Max Product Poster - Apple product advertisement"
+                class="work-image"
+                loading="lazy"
+            >
+
+            <h3>
+                AirPods Max Product Poster
+            </h3>
+
+            <p>
+                Modern technology advertisement
+                designed with clean composition
+                and strong visual hierarchy.
+            </p>
+
+        </div>
+
+        <!-- NEXUS -->
+
+        <div class="card">
+
+            <h3>
+                Nexus Brand Identity
+            </h3>
+
+            <p>
+                Complete brand identity system
+                for a modern clothing brand
+                including logo, guidelines,
+                and marketing materials.
+            </p>
+
+            <a
+                href="https://www.behance.net/gallery/250314097/NEXUS-Modern-Clothing-Brand-Identity"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-link"
+            >
+                Open Case Study
+            </a>
+
+        </div>
+
+        <!-- REAL ESTATE -->
+
+        <div class="card">
+
+            <h3>
+                Real Estate Campaign
+            </h3>
+
+            <p>
+                Luxury real estate marketing
+                campaign featuring high-end
+                property visuals and premium
+                branding.
+            </p>
+
+            <a
+                href="https://www.behance.net/gallery/250780741/Luxury-Real-Estate-Marketing-Campaign"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-link"
+            >
+                Open Case Study
+            </a>
+
+        </div>
+
+        <!-- VILLA -->
+
+        <div class="card">
+
+            <h3>
+                Luxury Villa Presentation
+            </h3>
+
+            <p>
+                A luxury real estate presentation
+                showcasing a high-end villa through
+                premium architecture, interior
+                design, and lifestyle-focused
+                visual storytelling.
+            </p>
+
+            <a
+                href="https://www.behance.net/gallery/251238695/-Luxury-Villa-Presentation"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-link"
+            >
+                Open Case Study
+            </a>
+
+        </div>
+
+        <!-- MERCEDES AMG -->
+
+        <div class="card">
+
+            <h3>
+                Mercedes AMG Visual Edit
+            </h3>
+
+            <p>
+                Professional visual edit and
+                enhancement of the Mercedes AMG
+                GT Black Series for premium
+                automotive marketing.
+            </p>
+
+            <a
+                href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-link"
+            >
+                Open Case Study
+            </a>
+
+        </div>
+
     </div>
+
 </section>
 
+<!-- ============================================
+     SERVICES
+     ============================================ -->
 
-<!-- SERVICES / HIRE ME SECTION -->
-<section id="services" class="section" aria-label="Services and pricing">
-    <h2 class="title">Work With Me</h2>
+<section
+    id="services"
+    class="section"
+    aria-label="Services and pricing"
+>
+
+    <h2 class="title">
+        Work With Me
+    </h2>
 
     <p class="services-intro">
-        Clear packages for social content, brand identity, and premium landing-page UI.
-        Every project is designed around the brand instead of using a recycled template.
+        Clear packages for social content,
+        brand identity, and premium landing-page UI.
+        Every project is designed around the brand
+        instead of using a recycled template.
     </p>
 
     <div class="services-grid">
 
-        <!-- SOCIAL MEDIA DESIGN -->
+        <!-- ========================================
+             SERVICE 01
+             ======================================== -->
+
         <article class="service-card">
+
             <div class="service-visual">
-    <img
-        src="images/launchlane-poster.jpg"
-        alt="Launch Lane Social Media Poster"
-        style="width:100%;height:100%;object-fit:cover;display:block;"
-    >
-</div>
+
+                <img
+                    src="images/launchlane-poster.jpg"
+                    alt="Launch Lane Social Media Poster"
+                    loading="lazy"
+                >
+
+            </div>
+
             <div class="service-body">
-                <div class="service-kicker">01 — Social Media</div>
-                <h3>Social Media Poster Design</h3>
+
+                <div class="service-kicker">
+                    01 — Social Media
+                </div>
+
+                <h3>
+                    Social Media Poster Design
+                </h3>
 
                 <p class="service-desc">
-                    A custom promotional poster built around your brand, offer, and audience.
-                    Ideal for launches, product promotions, announcements, campaigns, and paid social.
+                    A custom promotional poster
+                    built around your brand, offer,
+                    and audience. Ideal for launches,
+                    product promotions, announcements,
+                    campaigns, and paid social.
                 </p>
 
                 <ul class="service-list">
-                    <li>Custom visual direction</li>
-                    <li>Instagram / social-ready dimensions</li>
-                    <li>High-resolution final export</li>
-                    <li>1 revision per design</li>
-                    <li>Commercial-use final artwork</li>
+
+                    <li>
+                        Custom visual direction
+                    </li>
+
+                    <li>
+                        Instagram / social-ready dimensions
+                    </li>
+
+                    <li>
+                        High-resolution final export
+                    </li>
+
+                    <li>
+                        1 revision per design
+                    </li>
+
+                    <li>
+                        Commercial-use final artwork
+                    </li>
+
                 </ul>
 
                 <div class="service-price">
-                    <strong>$15</strong>
-                    <span>1 custom poster</span>
+
+                    <strong>
+                        $15
+                    </strong>
+
+                    <span>
+                        1 custom poster
+                    </span>
 
                     <div class="service-bundles">
-                        2 posters — $35<br>
+
+                        2 posters — $35
+                        <br>
+
                         5 posters — $60
+
                     </div>
 
-                    <a class="service-cta"
-                       href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20book%20a%20social%20media%20poster%20design."
-                       target="_blank" rel="noopener noreferrer">
+                    <a
+                        class="service-cta"
+                        href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20book%20a%20social%20media%20poster%20design."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Book This Service
                     </a>
+
                 </div>
+
             </div>
+
         </article>
 
-        <!-- BRAND IDENTITY -->
+        <!-- ========================================
+             SERVICE 02
+             ======================================== -->
+
         <article class="service-card">
-           <div class="service-visual">
-    <img
-        src="images/nibbl-brand.jpg"
-        alt="Nibbl Brand Identity"
-        style="width:100%;height:100%;object-fit:cover;display:block;"
-    >
-</div>
+
+            <div class="service-visual">
+
+                <img
+                    src="images/nibbl-brand.jpg"
+                    alt="Nibbl Brand Identity"
+                    loading="lazy"
+                >
+
+            </div>
+
             <div class="service-body">
-                <div class="service-kicker">02 — Branding</div>
-                <h3>Complete Brand Identity</h3>
+
+                <div class="service-kicker">
+                    02 — Branding
+                </div>
+
+                <h3>
+                    Complete Brand Identity
+                </h3>
 
                 <p class="service-desc">
-                    A cohesive visual identity for brands that need to look consistent, recognizable,
-                    and professional across digital and physical touchpoints.
+                    A cohesive visual identity for
+                    brands that need to look consistent,
+                    recognizable, and professional
+                    across digital and physical
+                    touchpoints.
                 </p>
 
                 <ul class="service-list">
-                    <li>Primary logo + variations</li>
-                    <li>Color palette & typography system</li>
-                    <li>Brand direction and visual language</li>
-                    <li>Core social-profile assets</li>
-                    <li>Editable source files</li>
-                    <li>2 revision rounds</li>
+
+                    <li>
+                        Primary logo + variations
+                    </li>
+
+                    <li>
+                        Color palette & typography system
+                    </li>
+
+                    <li>
+                        Brand direction and visual language
+                    </li>
+
+                    <li>
+                        Core social-profile assets
+                    </li>
+
+                    <li>
+                        Editable source files
+                    </li>
+
+                    <li>
+                        2 revision rounds
+                    </li>
+
                 </ul>
 
                 <div class="service-price">
-                    <strong>From $125</strong>
-                    <span>Final price depends on scope</span>
 
-                    <a class="service-cta"
-                       href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20discuss%20a%20brand%20identity%20project."
-                       target="_blank" rel="noopener noreferrer">
+                    <strong>
+                        From $125
+                    </strong>
+
+                    <span>
+                        Final price depends on scope
+                    </span>
+
+                    <a
+                        class="service-cta"
+                        href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20discuss%20a%20brand%20identity%20project."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Start a Brand Project
                     </a>
+
                 </div>
+
             </div>
+
         </article>
 
-        <!-- UI / REAL ESTATE -->
+        <!-- ========================================
+             SERVICE 03
+             ======================================== -->
+
         <article class="service-card">
-          <div class="service-visual">
-    <img
-        src="images/luxury-villa-ui.jpg"
-        alt="Luxury Villa Landing Page UI"
-        style="width:100%;height:100%;object-fit:cover;display:block;"
-    >
-</div>
+
+            <div class="service-visual">
+
+                <img
+                    src="images/luxury-villa-ui.jpg"
+                    alt="Luxury Villa Landing Page UI"
+                    loading="lazy"
+                >
+
+            </div>
+
             <div class="service-body">
-                <div class="service-kicker">03 — UI Design</div>
-                <h3>Luxury Landing Page UI</h3>
+
+                <div class="service-kicker">
+                    03 — UI Design
+                </div>
+
+                <h3>
+                    Luxury Landing Page UI
+                </h3>
 
                 <p class="service-desc">
-                    Premium landing-page design for real estate, hospitality, luxury brands, and
-                    businesses that need a polished digital first impression.
+                    Premium landing-page design for
+                    real estate, hospitality, luxury
+                    brands, and businesses that need
+                    a polished digital first impression.
                 </p>
 
                 <ul class="service-list">
-                    <li>Custom desktop landing-page UI</li>
-                    <li>Luxury visual direction</li>
-                    <li>Responsive mobile layout</li>
-                    <li>Source file included</li>
-                    <li>2 revision rounds</li>
-                    <li>Developer-ready layout structure</li>
+
+                    <li>
+                        Custom desktop landing-page UI
+                    </li>
+
+                    <li>
+                        Luxury visual direction
+                    </li>
+
+                    <li>
+                        Responsive mobile layout
+                    </li>
+
+                    <li>
+                        Source file included
+                    </li>
+
+                    <li>
+                        2 revision rounds
+                    </li>
+
+                    <li>
+                        Developer-ready layout structure
+                    </li>
+
                 </ul>
 
                 <div class="service-price">
-                    <strong>From $120</strong>
-                    <span>Single premium landing page</span>
 
-                    <a class="service-cta"
-                       href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20discuss%20a%20landing%20page%20UI%20design."
-                       target="_blank" rel="noopener noreferrer">
+                    <strong>
+                        From $120
+                    </strong>
+
+                    <span>
+                        Single premium landing page
+                    </span>
+
+                    <a
+                        class="service-cta"
+                        href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20discuss%20a%20landing%20page%20UI%20design."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Design My Landing Page
                     </a>
+
                 </div>
+
             </div>
+
         </article>
 
     </div>
 
     <p class="services-note">
-        Need something custom? Message me with your project scope and I’ll quote it separately.
-        Source files are included only where stated above.
+        Need something custom? Message me with
+        your project scope and I’ll quote it
+        separately. Source files are included
+        only where stated above.
     </p>
+
 </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="section" aria-label="Contact section">
-    <h2 class="title">Contact</h2>
-    
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+
+<section
+    id="contact"
+    class="section"
+    aria-label="Contact section"
+>
+
+    <h2 class="title">
+        Contact
+    </h2>
+
     <div class="contact-grid">
+
         <div class="contact-card">
-            <h3>Email</h3>
-            <p>Get in touch via email for project inquiries</p>
-            <a href="mailto:h.msaiedahm@gmail.com" class="btn-contact btn-email">Send Email</a>
+
+            <h3>
+                Email
+            </h3>
+
+            <p>
+                Get in touch via email
+                for project inquiries
+            </p>
+
+            <a
+                href="mailto:h.msaiedah@gmail.com"
+                class="btn-contact btn-email"
+            >
+                Send Email
+            </a>
+
         </div>
-        
+
         <div class="contact-card">
-            <h3>WhatsApp</h3>
-            <p>Message me directly for quick communication</p>
-            <a href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20am%20looking%20for%20help%20with%20my%20project.%20Can%20you%20help%20me%3F" target="_blank" rel="noopener noreferrer" class="btn-contact btn-whatsapp">Message Me</a>
+
+            <h3>
+                WhatsApp
+            </h3>
+
+            <p>
+                Message me directly
+                for quick communication
+            </p>
+
+            <a
+                href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20am%20looking%20for%20help%20with%20my%20project.%20Can%20you%20help%20me%3F"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-contact btn-whatsapp"
+            >
+                Message Me
+            </a>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- FOOTER -->
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+
 <footer role="contentinfo">
-    <p>&copy; 2026 HZ.DESIGNS — Visual Identity Studio. All rights reserved.</p>
+
+    <p>
+        &copy; 2026 HZ.DESIGNS —
+        Visual Identity Studio.
+        All rights reserved.
+    </p>
+
 </footer>
 
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+
 <script>
-    // Intersection Observer for Section Animations
-    const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                
-                // If it's the skills section, animate bars
-                if (entry.target.id === 'skills') {
-                    animateSkills();
-                }
+
+    /* ============================================
+       SECTION ANIMATIONS
+       ============================================ */
+
+    const sectionObserver =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            'visible'
+                        );
+
+                        if (
+                            entry.target.id ===
+                            'skills'
+                        ) {
+                            animateSkills();
+                        }
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.2
             }
+        );
+
+    document
+        .querySelectorAll('.section')
+        .forEach(section => {
+
+            sectionObserver.observe(section);
+
         });
-    }, { threshold: 0.2 });
 
-    document.querySelectorAll('.section').forEach(section => {
-        sectionObserver.observe(section);
-    });
 
-    // Skill Bars Animation
+    /* ============================================
+       SKILL BAR ANIMATION
+       ============================================ */
+
     function animateSkills() {
-        document.querySelectorAll('.skill-fill').forEach(fill => {
-            fill.style.width = fill.getAttribute('data-width');
-        });
+
+        document
+            .querySelectorAll('.skill-fill')
+            .forEach(fill => {
+
+                fill.style.width =
+                    fill.getAttribute(
+                        'data-width'
+                    );
+
+            });
+
     }
 
-    // Active Nav Link on Scroll
-    window.addEventListener('scroll', () => {
-        let current = '';
-        document.querySelectorAll('section[id]').forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 150) {
-                current = section.getAttribute('id');
-            }
-        });
 
-        document.querySelectorAll('nav a').forEach(a => {
-            a.classList.remove('active');
-            if (a.getAttribute('href') === `#${current}`) {
-                a.classList.add('active');
-            }
-        });
-    });
+    /* ============================================
+       ACTIVE NAVIGATION
+       ============================================ */
 
-    // Background Parallax
-    window.addEventListener('scroll', () => {
-        const bg = document.querySelector('.bg');
-        bg.style.transform = `translateY(${window.pageYOffset * 0.4}px)`;
-    });
+    window.addEventListener(
+        'scroll',
+        () => {
+
+            let current = '';
+
+            document
+                .querySelectorAll(
+                    'section[id]'
+                )
+                .forEach(section => {
+
+                    const sectionTop =
+                        section.offsetTop;
+
+                    if (
+                        window.pageYOffset >=
+                        sectionTop - 150
+                    ) {
+
+                        current =
+                            section.getAttribute(
+                                'id'
+                            );
+
+                    }
+
+                });
+
+            document
+                .querySelectorAll('nav a')
+                .forEach(a => {
+
+                    a.classList.remove(
+                        'active'
+                    );
+
+                    if (
+                        a.getAttribute('href') ===
+                        `#${current}`
+                    ) {
+
+                        a.classList.add(
+                            'active'
+                        );
+
+                    }
+
+                });
+
+        }
+    );
+
+
+    /* ============================================
+       BACKGROUND PARALLAX
+       ============================================ */
+
+    window.addEventListener(
+        'scroll',
+        () => {
+
+            const bg =
+                document.querySelector('.bg');
+
+            bg.style.transform =
+                `translateY(${
+                    window.pageYOffset * 0.4
+                }px)`;
+
+        }
+    );
+
 </script>
 
 </body>
