@@ -21,10 +21,6 @@
 
     <style>
 
-        /* ============================================
-           GLOBAL STYLES & RESET
-           ============================================ */
-
         * {
             margin: 0;
             padding: 0;
@@ -43,10 +39,6 @@
             line-height: 1.6;
         }
 
-        /* ============================================
-           BACKGROUND GLOW
-           ============================================ */
-
         .bg {
             position: fixed;
             width: 1000px;
@@ -63,25 +55,16 @@
             pointer-events: none;
         }
 
-        /* ============================================
-           NAVIGATION
-           ============================================ */
-
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             padding: 30px 8%;
-
             position: sticky;
             top: 0;
-
             background: rgba(7, 7, 11, 0.8);
             backdrop-filter: blur(10px);
-
             z-index: 100;
-
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -102,9 +85,7 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
-
             transition: color 0.3s ease;
-
             position: relative;
         }
 
@@ -117,20 +98,16 @@
 
         nav a::after {
             content: '';
-
             position: absolute;
             bottom: -5px;
             left: 0;
-
             width: 0;
             height: 2px;
-
             background: linear-gradient(
                 90deg,
                 #ff2d7d,
                 #7c3aed
             );
-
             transition: width 0.3s ease;
         }
 
@@ -138,10 +115,6 @@
         nav a.active::after {
             width: 100%;
         }
-
-        /* ============================================
-           HERO
-           ============================================ */
 
         .hero {
             padding: 140px 8% 90px;
@@ -157,19 +130,11 @@
 
         .hero p {
             margin-top: 20px;
-
             color: #aaa;
-
             font-size: 18px;
-
             max-width: 700px;
-
             line-height: 1.8;
         }
-
-        /* ============================================
-           SECTIONS
-           ============================================ */
 
         section {
             padding: 90px 8%;
@@ -178,7 +143,6 @@
         .section {
             opacity: 0;
             transform: translateY(40px);
-
             transition:
                 opacity 0.8s ease-out,
                 transform 0.8s ease-out;
@@ -192,61 +156,38 @@
         .title {
             font-size: 32px;
             font-weight: 700;
-
             margin-bottom: 40px;
-
             letter-spacing: -0.5px;
         }
 
-        /* ============================================
-           GRID
-           ============================================ */
-
         .grid {
             display: grid;
-
             grid-template-columns:
                 repeat(auto-fit, minmax(300px, 1fr));
-
             gap: 24px;
         }
 
-        /* ============================================
-           CARDS
-           ============================================ */
-
         .card {
             background: rgba(255, 255, 255, 0.06);
-
             border: 1px solid rgba(255, 255, 255, 0.1);
-
             backdrop-filter: blur(14px);
-
             border-radius: 18px;
-
             padding: 28px;
-
             transition:
                 transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
                 border 0.4s ease,
                 box-shadow 0.4s ease;
-
             overflow: hidden;
-
             position: relative;
         }
 
         .card::before {
             content: '';
-
             position: absolute;
-
             top: 0;
             left: -100%;
-
             width: 100%;
             height: 100%;
-
             background:
                 linear-gradient(
                     90deg,
@@ -254,9 +195,7 @@
                     rgba(255, 45, 125, 0.1),
                     transparent
                 );
-
             transition: left 0.6s ease;
-
             pointer-events: none;
         }
 
@@ -266,67 +205,45 @@
 
         .card:hover {
             transform: translateY(-8px);
-
-            border:
-                1px solid rgba(255, 45, 125, 0.4);
-
+            border: 1px solid rgba(255, 45, 125, 0.4);
             box-shadow:
                 0 20px 70px rgba(255, 45, 125, 0.15);
         }
 
         .card h3 {
             margin-bottom: 12px;
-
             font-size: 18px;
             font-weight: 700;
         }
 
         .card p {
             color: #aaa;
-
             font-size: 14px;
-
             line-height: 1.7;
         }
 
         .card a {
             display: inline-block;
-
             margin-top: 15px;
-
             color: #ff2d7d;
-
             font-weight: 600;
-
             text-decoration: none;
-
             transition: all 0.3s ease;
         }
 
         .card a:hover {
             color: #ff5a9b;
-
             transform: translateX(4px);
         }
-
-        /* ============================================
-           WORK IMAGES
-           ============================================ */
 
         .work-image {
             width: 100%;
             height: auto;
-
             max-height: 300px;
-
             object-fit: contain;
-
             border-radius: 12px;
-
             margin-bottom: 16px;
-
             transition: transform 0.4s ease;
-
             background:
                 linear-gradient(
                     135deg,
@@ -339,42 +256,29 @@
             transform: scale(1.05);
         }
 
-        /* ============================================
-           PROFILE
-           ============================================ */
-
         .profile-wrap {
             display: flex;
-
             align-items: center;
-
             gap: 30px;
         }
 
         .profile-img {
             width: 120px;
             height: 120px;
-
             border-radius: 50%;
-
             background:
                 url("https://i.ibb.co/mfFMqYQ/profile.jpg")
                 center / cover;
-
             border:
                 2px solid rgba(255, 255, 255, 0.25);
-
             box-shadow:
                 0 0 30px rgba(255, 45, 125, 0.25);
-
             flex-shrink: 0;
-
             transition: all 0.4s ease;
         }
 
         .profile-img:hover {
             transform: scale(1.08);
-
             box-shadow:
                 0 0 40px rgba(255, 45, 125, 0.4);
         }
@@ -382,50 +286,30 @@
         .box {
             background:
                 rgba(255, 255, 255, 0.06);
-
             border:
                 1px solid rgba(255, 255, 255, 0.1);
-
             backdrop-filter: blur(14px);
-
             border-radius: 18px;
-
             padding: 30px;
-
             color: #aaa;
-
             line-height: 1.8;
-
             flex: 1;
         }
 
-        /* ============================================
-           SKILL BARS
-           ============================================ */
-
         .skill-bar {
             width: 100%;
-
             height: 8px;
-
             background: #222;
-
             border-radius: 50px;
-
             overflow: hidden;
-
             margin-top: 12px;
-
             position: relative;
         }
 
         .skill-fill {
             height: 100%;
-
             border-radius: 50px;
-
             width: 0;
-
             transition:
                 width 1.2s cubic-bezier(
                     0.34,
@@ -453,7 +337,6 @@
                 );
         }
 
-        /* Figma now uses the same premium gradient */
         .skill-fill.figma {
             background:
                 linear-gradient(
@@ -465,161 +348,107 @@
 
         .skill-label {
             position: absolute;
-
             right: 8px;
             top: 50%;
-
             transform: translateY(-50%);
-
             font-size: 11px;
-
             font-weight: 600;
-
             color: #fff;
-
             text-shadow:
                 0 1px 3px rgba(0, 0, 0, 0.5);
-
             pointer-events: none;
         }
 
-        /* ============================================
-           SOCIAL
-           ============================================ */
-
         .social-grid {
             display: grid;
-
             grid-template-columns:
                 repeat(auto-fit, minmax(280px, 1fr));
-
             gap: 24px;
         }
 
         .social-card {
             background:
                 rgba(255, 255, 255, 0.06);
-
             border:
                 1px solid rgba(255, 255, 255, 0.1);
-
             backdrop-filter: blur(14px);
-
             padding: 30px;
-
             border-radius: 18px;
-
             text-align: center;
-
             transition: all 0.4s ease;
         }
 
         .social-card:hover {
             transform: translateY(-8px);
-
             border:
                 1px solid rgba(255, 45, 125, 0.4);
-
             box-shadow:
                 0 20px 70px rgba(255, 45, 125, 0.15);
         }
 
         .social-card h3 {
             font-size: 18px;
-
             font-weight: 700;
-
             margin-bottom: 8px;
         }
 
         .social-card p {
             color: #aaa;
-
             font-size: 13px;
-
             margin-bottom: 16px;
         }
 
         .btn-primary {
             display: inline-block;
-
             padding: 12px 24px;
-
             background: #fff;
-
             color: #000;
-
             border-radius: 10px;
-
             font-weight: 700;
-
             text-decoration: none;
-
             transition: all 0.3s ease;
-
             cursor: pointer;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-
             box-shadow:
                 0 10px 30px
                 rgba(255, 255, 255, 0.2);
         }
 
-        /* ============================================
-           SERVICES
-           ============================================ */
-
         .services-intro {
             max-width: 760px;
-
             color: #aaa;
-
             font-size: 16px;
-
             line-height: 1.8;
-
             margin-top: -18px;
-
             margin-bottom: 34px;
         }
 
         .services-grid {
             display: grid;
-
             grid-template-columns:
                 repeat(3, minmax(0, 1fr));
-
             gap: 24px;
         }
 
         .service-card {
             position: relative;
-
             overflow: hidden;
-
             border-radius: 22px;
-
             border:
                 1px solid rgba(255,255,255,.1);
-
             background:
                 linear-gradient(
                     180deg,
                     rgba(255,255,255,.075),
                     rgba(255,255,255,.035)
                 );
-
             backdrop-filter: blur(16px);
-
             min-height: 520px;
-
             display: flex;
-
             flex-direction: column;
-
             transition:
                 transform .35s ease,
                 border-color .35s ease,
@@ -628,10 +457,8 @@
 
         .service-card:hover {
             transform: translateY(-8px);
-
             border-color:
                 rgba(255,45,125,.45);
-
             box-shadow:
                 0 24px 80px
                 rgba(255,45,125,.12);
@@ -639,27 +466,19 @@
 
         .service-visual {
             width: 100%;
-
             aspect-ratio: 16 / 10;
-
             overflow: hidden;
-
             background: #111117;
-
             border-bottom:
                 1px solid rgba(255,255,255,.08);
-
             flex-shrink: 0;
         }
 
         .service-visual img {
             width: 100%;
             height: 100%;
-
             display: block;
-
             object-fit: cover;
-
             transition:
                 transform .4s ease;
         }
@@ -671,140 +490,95 @@
 
         .service-body {
             padding: 26px;
-
             display: flex;
-
             flex-direction: column;
-
             flex: 1;
         }
 
         .service-kicker {
             color: #ff2d7d;
-
             font-size: 11px;
-
             font-weight: 700;
-
             letter-spacing: 2px;
-
             text-transform: uppercase;
-
             margin-bottom: 10px;
         }
 
         .service-card h3 {
             font-size: 24px;
-
             line-height: 1.25;
-
             margin-bottom: 12px;
         }
 
         .service-desc {
             color: #aaa;
-
             font-size: 14px;
-
             line-height: 1.75;
-
             margin-bottom: 22px;
         }
 
         .service-list {
             list-style: none;
-
             display: grid;
-
             gap: 10px;
-
             margin-bottom: 26px;
         }
 
         .service-list li {
             color: #d8d8dc;
-
             font-size: 13px;
-
             padding-left: 18px;
-
             position: relative;
         }
 
         .service-list li::before {
             content: "•";
-
             position: absolute;
-
             left: 0;
-
             color: #ff2d7d;
         }
 
         .service-price {
             margin-top: auto;
-
             padding-top: 18px;
-
             border-top:
                 1px solid rgba(255,255,255,.08);
         }
 
         .service-price strong {
             display: block;
-
             font-size: 26px;
-
             line-height: 1.15;
         }
 
         .service-price span {
             display: block;
-
             color: #888;
-
             font-size: 12px;
-
             margin-top: 5px;
         }
 
         .service-bundles {
             margin-top: 12px;
-
             color: #bbb;
-
             font-size: 12px;
-
             line-height: 1.7;
         }
 
         .service-cta {
             margin-top: 18px;
-
             display: inline-flex;
-
             align-items: center;
-
             justify-content: center;
-
             width: 100%;
-
             min-height: 46px;
-
             padding: 12px 18px;
-
             background: #fff;
-
             color: #050507;
-
             text-decoration: none;
-
             border-radius: 12px;
-
             font-size: 13px;
-
             font-weight: 800;
-
             transition:
                 transform .25s ease,
                 box-shadow .25s ease;
@@ -812,7 +586,6 @@
 
         .service-cta:hover {
             transform: translateY(-2px);
-
             box-shadow:
                 0 10px 30px
                 rgba(255,255,255,.16);
@@ -820,81 +593,55 @@
 
         .services-note {
             margin-top: 24px;
-
             color: #777;
-
             font-size: 12px;
-
             line-height: 1.7;
         }
 
-        /* ============================================
-           CONTACT
-           ============================================ */
-
         .contact-grid {
             display: grid;
-
             grid-template-columns:
                 repeat(auto-fit, minmax(280px, 1fr));
-
             gap: 24px;
         }
 
         .contact-card {
             background:
                 rgba(255, 255, 255, 0.06);
-
             border:
                 1px solid rgba(255, 255, 255, 0.1);
-
             backdrop-filter: blur(14px);
-
             padding: 30px;
-
             border-radius: 18px;
-
             text-align: center;
-
             transition: all 0.4s ease;
         }
 
         .contact-card:hover {
             transform: translateY(-8px);
-
             border:
                 1px solid rgba(255, 45, 125, 0.4);
         }
 
         .contact-card h3 {
             font-size: 18px;
-
             font-weight: 700;
-
             margin-bottom: 8px;
         }
 
         .contact-card p {
             color: #aaa;
-
             font-size: 13px;
-
             margin-bottom: 16px;
         }
 
         .btn-contact {
             display: inline-block;
-
             padding: 14px 28px;
-
             border-radius: 10px;
-
             font-weight: 700;
-
             text-decoration: none;
-
             transition: all 0.3s ease;
-
             cursor: pointer;
         }
 
@@ -905,7 +652,6 @@
 
         .btn-email:hover {
             transform: translateY(-2px);
-
             box-shadow:
                 0 10px 30px
                 rgba(255,255,255,.2);
@@ -918,7 +664,6 @@
 
         .btn-whatsapp:hover {
             transform: translateY(-2px);
-
             box-shadow:
                 0 10px 30px
                 rgba(37,211,102,.3);
@@ -926,40 +671,24 @@
 
         .btn-link {
             color: #ff2d7d;
-
             font-weight: 600;
-
             text-decoration: none;
-
             transition: all 0.3s ease;
         }
 
         .btn-link:hover {
             color: #ff5a9b;
-
             transform: translateX(4px);
         }
 
-        /* ============================================
-           FOOTER
-           ============================================ */
-
         footer {
             text-align: center;
-
             padding: 50px 8%;
-
             color: #666;
-
             font-size: 13px;
-
             border-top:
                 1px solid rgba(255,255,255,.05);
         }
-
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
 
         @media (max-width: 900px) {
 
@@ -973,17 +702,13 @@
 
             nav {
                 flex-direction: column;
-
                 gap: 20px;
-
                 padding: 20px 8%;
             }
 
             nav ul {
                 flex-wrap: wrap;
-
                 justify-content: center;
-
                 gap: 15px;
             }
 
@@ -1002,7 +727,6 @@
 
             .profile-wrap {
                 flex-direction: column;
-
                 text-align: center;
             }
 
@@ -1057,26 +781,15 @@
 
         }
 
-        /* ============================================
-           ACCESSIBILITY
-           ============================================ */
-
         .skip-link {
             position: absolute;
-
             top: -40px;
             left: 0;
-
             background: #ff2d7d;
-
             color: white;
-
             padding: 8px;
-
             text-decoration: none;
-
             z-index: 1000;
-
             transition: top 0.3s;
         }
 
@@ -1094,10 +807,6 @@
 </a>
 
 <div class="bg"></div>
-
-<!-- ============================================
-     NAVIGATION
-     ============================================ -->
 
 <nav
     role="navigation"
@@ -1136,10 +845,6 @@
 
 </nav>
 
-<!-- ============================================
-     HERO
-     ============================================ -->
-
 <section
     class="hero"
     aria-label="Hero section"
@@ -1158,10 +863,6 @@
     </p>
 
 </section>
-
-<!-- ============================================
-     PROFILE
-     ============================================ -->
 
 <section
     id="about"
@@ -1203,10 +904,6 @@
 
 </section>
 
-<!-- ============================================
-     SKILLS
-     ============================================ -->
-
 <section
     id="skills"
     class="section"
@@ -1218,8 +915,6 @@
     </h2>
 
     <div class="grid">
-
-        <!-- ILLUSTRATOR -->
 
         <div class="card">
 
@@ -1257,8 +952,6 @@
 
         </div>
 
-        <!-- PHOTOSHOP -->
-
         <div class="card">
 
             <h3>
@@ -1294,8 +987,6 @@
             </div>
 
         </div>
-
-        <!-- FIGMA -->
 
         <div class="card">
 
@@ -1337,10 +1028,6 @@
     </div>
 
 </section>
-
-<!-- ============================================
-     SOCIAL PRESENCE
-     ============================================ -->
 
 <section
     id="social"
@@ -1424,10 +1111,6 @@
 
 </section>
 
-<!-- ============================================
-     SELECTED WORK
-     ============================================ -->
-
 <section
     id="work"
     class="section"
@@ -1439,8 +1122,6 @@
     </h2>
 
     <div class="grid">
-
-        <!-- MERCEDES -->
 
         <div class="card work-card">
 
@@ -1463,8 +1144,6 @@
 
         </div>
 
-        <!-- FRAGRANCE -->
-
         <div class="card work-card">
 
             <img
@@ -1486,8 +1165,6 @@
 
         </div>
 
-        <!-- AIRPODS -->
-
         <div class="card work-card">
 
             <img
@@ -1508,8 +1185,6 @@
             </p>
 
         </div>
-
-        <!-- NEXUS -->
 
         <div class="card">
 
@@ -1535,8 +1210,6 @@
 
         </div>
 
-        <!-- REAL ESTATE -->
-
         <div class="card">
 
             <h3>
@@ -1560,8 +1233,6 @@
             </a>
 
         </div>
-
-        <!-- VILLA -->
 
         <div class="card">
 
@@ -1587,8 +1258,6 @@
             </a>
 
         </div>
-
-        <!-- MERCEDES AMG -->
 
         <div class="card">
 
@@ -1618,10 +1287,6 @@
 
 </section>
 
-<!-- ============================================
-     SERVICES
-     ============================================ -->
-
 <section
     id="services"
     class="section"
@@ -1641,16 +1306,14 @@
 
     <div class="services-grid">
 
-        <!-- ========================================
-             SERVICE 01
-             ======================================== -->
+        <!-- SERVICE 01 -->
 
         <article class="service-card">
 
             <div class="service-visual">
 
                 <img
-                    src="images/launchlane-poster.jpg"
+                    src="https://i.ibb.co/npTNcVW/launchlane-poster-jpg.png"
                     alt="Launch Lane Social Media Poster"
                     loading="lazy"
                 >
@@ -1733,16 +1396,14 @@
 
         </article>
 
-        <!-- ========================================
-             SERVICE 02
-             ======================================== -->
+        <!-- SERVICE 02 -->
 
         <article class="service-card">
 
             <div class="service-visual">
 
                 <img
-                    src="images/nibbl-brand.jpg"
+                    src="https://i.ibb.co/wFT2SQCZ/nibbl-brand-jpg.png"
                     alt="Nibbl Brand Identity"
                     loading="lazy"
                 >
@@ -1820,16 +1481,17 @@
 
         </article>
 
-        <!-- ========================================
-             SERVICE 03
-             ======================================== -->
+        <!-- SERVICE 03 -->
 
         <article class="service-card">
 
             <div class="service-visual">
 
+                <!-- YOU SENT THE BRAND LINK AGAIN FOR THIS ONE.
+                     REPLACE THIS URL WITH YOUR ACTUAL UI IMGBB DIRECT URL. -->
+
                 <img
-                    src="images/luxury-villa-ui.jpg"
+                    src="https://i.ibb.co/wFT2SQCZ/nibbl-brand-jpg.png"
                     alt="Luxury Villa Landing Page UI"
                     loading="lazy"
                 >
@@ -1917,10 +1579,6 @@
 
 </section>
 
-<!-- ============================================
-     CONTACT
-     ============================================ -->
-
 <section
     id="contact"
     class="section"
@@ -1979,10 +1637,6 @@
 
 </section>
 
-<!-- ============================================
-     FOOTER
-     ============================================ -->
-
 <footer role="contentinfo">
 
     <p>
@@ -1993,15 +1647,7 @@
 
 </footer>
 
-<!-- ============================================
-     JAVASCRIPT
-     ============================================ -->
-
 <script>
-
-    /* ============================================
-       SECTION ANIMATIONS
-       ============================================ */
 
     const sectionObserver =
         new IntersectionObserver(
@@ -2041,10 +1687,6 @@
         });
 
 
-    /* ============================================
-       SKILL BAR ANIMATION
-       ============================================ */
-
     function animateSkills() {
 
         document
@@ -2060,10 +1702,6 @@
 
     }
 
-
-    /* ============================================
-       ACTIVE NAVIGATION
-       ============================================ */
 
     window.addEventListener(
         'scroll',
@@ -2118,10 +1756,6 @@
         }
     );
 
-
-    /* ============================================
-       BACKGROUND PARALLAX
-       ============================================ */
 
     window.addEventListener(
         'scroll',
