@@ -121,6 +121,40 @@
             max-width: 900px;
         }
 
+        /* =========================
+           AVAILABILITY BADGE
+        ========================= */
+
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 100px;
+            background: transparent;
+            margin-bottom: 24px;
+        }
+
+        .availability-dot {
+            width: 7px;
+            height: 7px;
+            min-width: 7px;
+            border-radius: 50%;
+            background: #4ade80;
+            box-shadow:
+                0 0 6px rgba(74, 222, 128, 0.7),
+                0 0 12px rgba(74, 222, 128, 0.3);
+        }
+
+        .availability-text {
+            color: #96969e;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
         .hero h1 {
             font-size: clamp(48px, 8vw, 72px);
             line-height: 1.1;
@@ -470,14 +504,6 @@
                 rgba(255,45,125,.12);
         }
 
-        /*
-            BIGGER IMAGE AREA
-
-            The image is contained instead of cropped,
-            so the full poster / brand board / UI
-            remains visible.
-        */
-
         .service-visual {
             width: 100%;
             height: 420px;
@@ -512,11 +538,6 @@
         .service-visual img {
             transform: scale(1.025);
         }
-
-        /*
-            Center the final service card when
-            there are 3 services.
-        */
 
         .service-card:nth-child(3) {
             grid-column: 1 / -1;
@@ -863,6 +884,14 @@
                 font-size: 22px;
             }
 
+            .availability-badge {
+                padding: 7px 13px;
+            }
+
+            .availability-text {
+                font-size: 12px;
+            }
+
         }
 
         .skip-link {
@@ -933,6 +962,19 @@
     class="hero"
     aria-label="Hero section"
 >
+
+    <div
+        class="availability-badge"
+        aria-label="Available for freelance projects"
+    >
+
+        <span class="availability-dot"></span>
+
+        <span class="availability-text">
+            Available for freelance projects
+        </span>
+
+    </div>
 
     <h1>
         Brand Identity, UI & Visual Design
