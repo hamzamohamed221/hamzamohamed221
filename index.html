@@ -504,23 +504,43 @@
                 rgba(255,45,125,.12);
         }
 
+        /*
+            Base service visual.
+            The individual service backgrounds below
+            override this depending on the image.
+        */
+
         .service-visual {
             width: 100%;
             height: 420px;
             overflow: hidden;
-            background:
-                radial-gradient(
-                    circle at center,
-                    #1b1b25,
-                    #0e0e13 75%
-                );
+            background: #111116;
             border-bottom:
                 1px solid rgba(255,255,255,.08);
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 18px;
+            padding: 20px;
+        }
+
+        /*
+            SERVICE-SPECIFIC BACKGROUNDS
+        */
+
+        /* Launch Lane — dark navy */
+        .service-card:nth-child(1) .service-visual {
+            background: #0B1020;
+        }
+
+        /* NIBBL — cream / beige */
+        .service-card:nth-child(2) .service-visual {
+            background: #E9DCC8;
+        }
+
+        /* Luxury Villa UI — light presentation background */
+        .service-card:nth-child(3) .service-visual {
+            background: #E8E5DF;
         }
 
         .service-visual img {
@@ -534,10 +554,20 @@
                 transform .4s ease;
         }
 
+        /*
+            Very subtle hover only.
+            The image remains fully visible.
+        */
+
         .service-card:hover
         .service-visual img {
-            transform: scale(1.025);
+            transform: scale(1.01);
         }
+
+        /*
+            Third service card is centered
+            beneath the first two.
+        */
 
         .service-card:nth-child(3) {
             grid-column: 1 / -1;
@@ -823,7 +853,7 @@
 
             .service-visual {
                 height: 360px;
-                padding: 14px;
+                padding: 16px;
             }
 
             .service-body {
@@ -873,7 +903,7 @@
 
             .service-visual {
                 height: 300px;
-                padding: 12px;
+                padding: 14px;
             }
 
             .service-body {
