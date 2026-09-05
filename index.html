@@ -426,11 +426,17 @@
             margin-bottom: 34px;
         }
 
+        /* =========================
+           SERVICES
+        ========================= */
+
         .services-grid {
             display: grid;
             grid-template-columns:
-                repeat(3, minmax(0, 1fr));
-            gap: 24px;
+                repeat(2, minmax(0, 1fr));
+            gap: 30px;
+            max-width: 1250px;
+            margin: 0 auto;
         }
 
         .service-card {
@@ -446,7 +452,7 @@
                     rgba(255,255,255,.035)
                 );
             backdrop-filter: blur(16px);
-            min-height: 520px;
+            min-height: 650px;
             display: flex;
             flex-direction: column;
             transition:
@@ -464,32 +470,62 @@
                 rgba(255,45,125,.12);
         }
 
+        /*
+            BIGGER IMAGE AREA
+
+            The image is contained instead of cropped,
+            so the full poster / brand board / UI
+            remains visible.
+        */
+
         .service-visual {
             width: 100%;
-            aspect-ratio: 16 / 10;
+            height: 420px;
             overflow: hidden;
-            background: #111117;
+            background:
+                radial-gradient(
+                    circle at center,
+                    #1b1b25,
+                    #0e0e13 75%
+                );
             border-bottom:
                 1px solid rgba(255,255,255,.08);
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
         }
 
         .service-visual img {
             width: 100%;
             height: 100%;
             display: block;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 10px;
             transition:
                 transform .4s ease;
         }
 
         .service-card:hover
         .service-visual img {
-            transform: scale(1.04);
+            transform: scale(1.025);
+        }
+
+        /*
+            Center the final service card when
+            there are 3 services.
+        */
+
+        .service-card:nth-child(3) {
+            grid-column: 1 / -1;
+            width: calc(50% - 15px);
+            justify-self: center;
         }
 
         .service-body {
-            padding: 26px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             flex: 1;
@@ -505,7 +541,7 @@
         }
 
         .service-card h3 {
-            font-size: 24px;
+            font-size: 25px;
             line-height: 1.25;
             margin-bottom: 12px;
         }
@@ -690,13 +726,31 @@
                 1px solid rgba(255,255,255,.05);
         }
 
+        /* =========================
+           TABLET
+        ========================= */
+
         @media (max-width: 900px) {
 
             .services-grid {
                 grid-template-columns: 1fr;
             }
 
+            .service-card:nth-child(3) {
+                grid-column: auto;
+                width: 100%;
+                justify-self: stretch;
+            }
+
+            .service-visual {
+                height: 420px;
+            }
+
         }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 768px) {
 
@@ -742,7 +796,24 @@
                 max-height: 250px;
             }
 
+            .service-card {
+                min-height: auto;
+            }
+
+            .service-visual {
+                height: 360px;
+                padding: 14px;
+            }
+
+            .service-body {
+                padding: 25px;
+            }
+
         }
+
+        /* =========================
+           SMALL PHONES
+        ========================= */
 
         @media (max-width: 480px) {
 
@@ -777,6 +848,19 @@
 
             .work-image {
                 max-height: 200px;
+            }
+
+            .service-visual {
+                height: 300px;
+                padding: 12px;
+            }
+
+            .service-body {
+                padding: 22px;
+            }
+
+            .service-card h3 {
+                font-size: 22px;
             }
 
         }
@@ -1487,11 +1571,8 @@
 
             <div class="service-visual">
 
-                <!-- YOU SENT THE BRAND LINK AGAIN FOR THIS ONE.
-                     REPLACE THIS URL WITH YOUR ACTUAL UI IMGBB DIRECT URL. -->
-
                 <img
-                    src="https://ibb.co/XfZXWDkh/nibbl-brand-jpg.png"
+                    src="https://i.ibb.co/4wZWF2g6/luxury-villa-ui-jpg.png"
                     alt="Luxury Villa Landing Page UI"
                     loading="lazy"
                 >
