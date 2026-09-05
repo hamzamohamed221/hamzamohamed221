@@ -372,6 +372,167 @@
             box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
         }
 
+
+        /* ============================================
+           SERVICES / HIRE ME SECTION
+           ============================================ */
+        .services-intro {
+            max-width: 760px;
+            color: #aaa;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-top: -18px;
+            margin-bottom: 34px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 22px;
+            border: 1px solid rgba(255,255,255,.1);
+            background:
+                linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+            backdrop-filter: blur(16px);
+            min-height: 520px;
+            display: flex;
+            flex-direction: column;
+            transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255,45,125,.45);
+            box-shadow: 0 24px 80px rgba(255,45,125,.12);
+        }
+
+        .service-visual {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            background:
+                radial-gradient(circle at 78% 20%, rgba(124,58,237,.30), transparent 32%),
+                radial-gradient(circle at 22% 70%, rgba(255,45,125,.22), transparent 35%),
+                #111117;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            display: flex;
+            align-items: flex-end;
+            padding: 22px;
+            color: rgba(255,255,255,.76);
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .service-body {
+            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .service-kicker {
+            color: #ff2d7d;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .service-desc {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.75;
+            margin-bottom: 22px;
+        }
+
+        .service-list {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+            margin-bottom: 26px;
+        }
+
+        .service-list li {
+            color: #d8d8dc;
+            font-size: 13px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .service-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ff2d7d;
+        }
+
+        .service-price {
+            margin-top: auto;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .service-price strong {
+            display: block;
+            font-size: 26px;
+            line-height: 1.15;
+        }
+
+        .service-price span {
+            display: block;
+            color: #888;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .service-bundles {
+            margin-top: 12px;
+            color: #bbb;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .service-cta {
+            margin-top: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 46px;
+            padding: 12px 18px;
+            background: #fff;
+            color: #050507;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 800;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .service-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,255,255,.16);
+        }
+
+        .services-note {
+            margin-top: 24px;
+            color: #777;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
         /* ============================================
            CONTACT SECTION
            ============================================ */
@@ -459,6 +620,7 @@
             .profile-wrap { flex-direction: column; text-align: center; }
             .grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
             .work-image { max-height: 250px; }
+            .services-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 480px) {
@@ -501,6 +663,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#social">Socials</a></li>
         <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -633,6 +796,141 @@
             <a href="https://www.behance.net/gallery/248181739/ercedes-AMG-GT-Black-Series-Visual-Edit" target="_blank" rel="noopener noreferrer" class="btn-link">Open Case Study</a>
         </div>
     </div>
+</section>
+
+
+<!-- SERVICES / HIRE ME SECTION -->
+<section id="services" class="section" aria-label="Services and pricing">
+    <h2 class="title">Work With Me</h2>
+
+    <p class="services-intro">
+        Clear packages for social content, brand identity, and premium landing-page UI.
+        Every project is designed around the brand instead of using a recycled template.
+    </p>
+
+    <div class="services-grid">
+
+        <!-- SOCIAL MEDIA DESIGN -->
+        <article class="service-card">
+            <div class="service-visual">
+                <span>Replace with your best poster / campaign image</span>
+            </div>
+
+            <div class="service-body">
+                <div class="service-kicker">01 — Social Media</div>
+                <h3>Social Media Poster Design</h3>
+
+                <p class="service-desc">
+                    A custom promotional poster built around your brand, offer, and audience.
+                    Ideal for launches, product promotions, announcements, campaigns, and paid social.
+                </p>
+
+                <ul class="service-list">
+                    <li>Custom visual direction</li>
+                    <li>Instagram / social-ready dimensions</li>
+                    <li>High-resolution final export</li>
+                    <li>1 revision per design</li>
+                    <li>Commercial-use final artwork</li>
+                </ul>
+
+                <div class="service-price">
+                    <strong>$15</strong>
+                    <span>1 custom poster</span>
+
+                    <div class="service-bundles">
+                        2 posters — $30<br>
+                        3 posters — $40
+                    </div>
+
+                    <a class="service-cta"
+                       href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20book%20a%20social%20media%20poster%20design."
+                       target="_blank" rel="noopener noreferrer">
+                        Book This Service
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- BRAND IDENTITY -->
+        <article class="service-card">
+            <div class="service-visual">
+                <span>Replace with your strongest brand identity mockup</span>
+            </div>
+
+            <div class="service-body">
+                <div class="service-kicker">02 — Branding</div>
+                <h3>Complete Brand Identity</h3>
+
+                <p class="service-desc">
+                    A cohesive visual identity for brands that need to look consistent, recognizable,
+                    and professional across digital and physical touchpoints.
+                </p>
+
+                <ul class="service-list">
+                    <li>Primary logo + variations</li>
+                    <li>Color palette & typography system</li>
+                    <li>Brand direction and visual language</li>
+                    <li>Core social-profile assets</li>
+                    <li>Editable source files</li>
+                    <li>2 revision rounds</li>
+                </ul>
+
+                <div class="service-price">
+                    <strong>From $100</strong>
+                    <span>Final price depends on scope</span>
+
+                    <a class="service-cta"
+                       href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20discuss%20a%20brand%20identity%20project."
+                       target="_blank" rel="noopener noreferrer">
+                        Start a Brand Project
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- UI / REAL ESTATE -->
+        <article class="service-card">
+            <div class="service-visual">
+                <span>Replace with your luxury real-estate landing page</span>
+            </div>
+
+            <div class="service-body">
+                <div class="service-kicker">03 — UI Design</div>
+                <h3>Luxury Landing Page UI</h3>
+
+                <p class="service-desc">
+                    Premium landing-page design for real estate, hospitality, luxury brands, and
+                    businesses that need a polished digital first impression.
+                </p>
+
+                <ul class="service-list">
+                    <li>Custom desktop landing-page UI</li>
+                    <li>Luxury visual direction</li>
+                    <li>Responsive mobile layout</li>
+                    <li>Source file included</li>
+                    <li>2 revision rounds</li>
+                    <li>Developer-ready layout structure</li>
+                </ul>
+
+                <div class="service-price">
+                    <strong>From $85</strong>
+                    <span>Single premium landing page</span>
+
+                    <a class="service-cta"
+                       href="https://wa.me/201069826122?text=Hi%20Hamza,%20I%20want%20to%20discuss%20a%20landing%20page%20UI%20design."
+                       target="_blank" rel="noopener noreferrer">
+                        Design My Landing Page
+                    </a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="services-note">
+        Need something custom? Message me with your project scope and I’ll quote it separately.
+        Source files are included only where stated above.
+    </p>
 </section>
 
 <!-- CONTACT SECTION -->
